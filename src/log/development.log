@@ -858,3 +858,38 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms | Allocations: 8136)
 
 
+Started GET "/" for ::1 at 2021-11-11 22:28:40 +1100
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 51.8ms | Allocations: 15114)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 3.1ms | Allocations: 616)
+  Rendered layout layouts/application.html.erb (Duration: 68.6ms | Allocations: 23541)
+Completed 200 OK in 77ms (Views: 70.7ms | ActiveRecord: 0.0ms | Allocations: 27326)
+
+
+Started GET "/" for ::1 at 2021-11-11 22:46:20 +1100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 27.1ms | Allocations: 8697)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 5.0ms | Allocations: 616)
+  Rendered layout layouts/application.html.erb (Duration: 50.1ms | Allocations: 17152)
+Completed 200 OK in 61ms (Views: 53.5ms | ActiveRecord: 0.0ms | Allocations: 20938)
+
+
+Started GET "/" for ::1 at 2021-11-11 22:46:20 +1100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 711)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 7800)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 8354)
+
+
