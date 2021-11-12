@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_11_095731) do
+ActiveRecord::Schema.define(version: 2021_11_12_052117) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.string "address_line1"
+    t.string "address_line2"
+    t.string "suburb"
+    t.string "state"
+    t.integer "postcode"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_addresses_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +39,21 @@ ActiveRecord::Schema.define(version: 2021_11_11_095731) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "vehicles", force: :cascade do |t|
+    t.string "brand"
+    t.string "model"
+    t.string "body_type"
+    t.integer "door_count"
+    t.integer "seat_count"
+    t.string "transmission"
+    t.string "number_plate"
+    t.boolean "available"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_vehicles_on_user_id"
+  end
+
+  add_foreign_key "addresses", "users"
+  add_foreign_key "vehicles", "users"
 end
