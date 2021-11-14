@@ -5,3 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   # has_many :vehicles
 end
+
+def show
+  @vehicle = Vehicle.find(params[:id])
+end
