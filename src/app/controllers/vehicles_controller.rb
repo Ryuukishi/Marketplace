@@ -1,7 +1,4 @@
 class VehiclesController < ApplicationController
-  
-  before_action :vehicle_params
-
 
   def index
     @vehicles = Vehicle.all.order("brand ASC")
@@ -18,10 +15,11 @@ class VehiclesController < ApplicationController
 
   def create
     @vehicle = Vehicle.new vehicle_params
+    params.inspect
     # @vehicle.user_id = current_user.id
     respond_to do |format|
       if @vehicle.save
-        format.html { redirect_to vehicles_path }
+        format.html { redirect_to @vehicle }
       else
         format.html { render :new }
       end
@@ -40,7 +38,7 @@ class VehiclesController < ApplicationController
   private
   
   def vehicle_params
-    params.permit(:brand, :model, :body_type, :door_count)
+    params.require(:vehicle).permit(:brand, :model, :body_type, :door_count, :seat_count)
   end
 
 end

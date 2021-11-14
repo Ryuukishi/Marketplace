@@ -8050,3 +8050,933 @@ Processing by VehiclesController#show as HTML
 Completed 200 OK in 109ms (Views: 64.5ms | ActiveRecord: 22.6ms | Allocations: 20184)
 
 
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:28:41 +1100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 381.7ms | Allocations: 356215)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 383.6ms | Allocations: 356826)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.1ms | Allocations: 504)
+  Rendered layout layouts/application.html.erb (Duration: 433.8ms | Allocations: 374641)
+Completed 200 OK in 498ms (Views: 438.4ms | ActiveRecord: 17.5ms | Allocations: 391419)
+
+
+Started POST "/vehicles" for ::1 at 2021-11-14 17:28:50 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"test", "model"=>"test", "body_type"=>"Small Car", "door_count"=>"2", "seat_count"=>"1"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameters: :authenticity_token, :vehicle, :commit[0m
+[31mUnpermitted parameters: :authenticity_token, :vehicle, :commit[0m
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:23:in `block in create'
+  [1m[36mVehicle Create (2.1ms)[0m  [1m[32mINSERT INTO "vehicles" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-14 06:28:50.911127"], ["updated_at", "2021-11-14 06:28:50.911127"]]
+  ↳ app/controllers/vehicles_controller.rb:23:in `block in create'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:23:in `block in create'
+Redirected to http://localhost:3000/vehicles
+Completed 302 Found in 30ms (ActiveRecord: 10.5ms | Allocations: 4939)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-14 17:28:51 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (2.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:17
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 7882)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 5.6ms | Allocations: 1066)
+  Rendered layout layouts/application.html.erb (Duration: 54.7ms | Allocations: 16837)
+Completed 200 OK in 59ms (Views: 51.8ms | ActiveRecord: 3.9ms | Allocations: 17741)
+
+
+Started DELETE "/vehicle/49" for ::1 at 2021-11-14 17:28:57 +1100
+Processing by VehiclesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"49"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameters: :_method, :authenticity_token[0m
+  [1m[36mVehicle Load (1.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:36:in `destroy'
+  [1m[36mVehicle Destroy (1.6ms)[0m  [1m[31mDELETE FROM "vehicles" WHERE "vehicles"."id" = $1[0m  [["id", 49]]
+  ↳ app/controllers/vehicles_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:36:in `destroy'
+Redirected to http://localhost:3000/vehicles
+Completed 302 Found in 29ms (ActiveRecord: 12.9ms | Allocations: 4275)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-14 17:28:57 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (2.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:17
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 7324)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 4.1ms | Allocations: 1065)
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 16094)
+Completed 200 OK in 44ms (Views: 38.1ms | ActiveRecord: 3.6ms | Allocations: 16748)
+
+
+Started DELETE "/vehicle/72" for ::1 at 2021-11-14 17:29:01 +1100
+Processing by VehiclesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"72"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameters: :_method, :authenticity_token[0m
+  [1m[36mVehicle Load (1.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:36:in `destroy'
+  [1m[36mVehicle Destroy (1.6ms)[0m  [1m[31mDELETE FROM "vehicles" WHERE "vehicles"."id" = $1[0m  [["id", 72]]
+  ↳ app/controllers/vehicles_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:36:in `destroy'
+Redirected to http://localhost:3000/vehicles
+Completed 302 Found in 24ms (ActiveRecord: 9.0ms | Allocations: 4005)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-14 17:29:01 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (2.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:17
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 35.9ms | Allocations: 7257)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 10.0ms | Allocations: 1065)
+  Rendered layout layouts/application.html.erb (Duration: 62.3ms | Allocations: 15952)
+Completed 200 OK in 66ms (Views: 54.1ms | ActiveRecord: 9.1ms | Allocations: 16606)
+
+
+Started DELETE "/vehicle/24" for ::1 at 2021-11-14 17:29:18 +1100
+Processing by VehiclesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"24"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameters: :_method, :authenticity_token[0m
+  [1m[36mVehicle Load (1.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:36:in `destroy'
+  [1m[36mVehicle Destroy (1.2ms)[0m  [1m[31mDELETE FROM "vehicles" WHERE "vehicles"."id" = $1[0m  [["id", 24]]
+  ↳ app/controllers/vehicles_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:36:in `destroy'
+Redirected to http://localhost:3000/vehicles
+Completed 302 Found in 20ms (ActiveRecord: 6.7ms | Allocations: 4004)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-14 17:29:18 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (2.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:17
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 30.6ms | Allocations: 7190)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 4.8ms | Allocations: 1065)
+  Rendered layout layouts/application.html.erb (Duration: 52.1ms | Allocations: 15889)
+Completed 200 OK in 57ms (Views: 48.4ms | ActiveRecord: 4.9ms | Allocations: 16543)
+
+
+Started DELETE "/vehicle/28" for ::1 at 2021-11-14 17:29:26 +1100
+Processing by VehiclesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"28"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameters: :_method, :authenticity_token[0m
+  [1m[36mVehicle Load (5.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:36:in `destroy'
+  [1m[36mVehicle Destroy (2.5ms)[0m  [1m[31mDELETE FROM "vehicles" WHERE "vehicles"."id" = $1[0m  [["id", 28]]
+  ↳ app/controllers/vehicles_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:36:in `destroy'
+Redirected to http://localhost:3000/vehicles
+Completed 302 Found in 30ms (ActiveRecord: 17.7ms | Allocations: 3989)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-14 17:29:26 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:17
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 18.1ms | Allocations: 7123)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 4.5ms | Allocations: 1065)
+  Rendered layout layouts/application.html.erb (Duration: 37.6ms | Allocations: 15816)
+Completed 200 OK in 41ms (Views: 35.0ms | ActiveRecord: 3.4ms | Allocations: 16469)
+
+
+Started GET "/vehicle/102" for ::1 at 2021-11-14 17:29:30 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[36mVehicle Load (4.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 102], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 191)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 8.1ms | Allocations: 1079)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 8899)
+Completed 200 OK in 39ms (Views: 27.6ms | ActiveRecord: 5.9ms | Allocations: 10230)
+
+
+Started DELETE "/vehicle/100" for ::1 at 2021-11-14 17:29:47 +1100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"100"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameters: :_method, :authenticity_token[0m
+  [1m[36mVehicle Load (2.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:36:in `destroy'
+  [1m[36mVehicle Destroy (1.5ms)[0m  [1m[31mDELETE FROM "vehicles" WHERE "vehicles"."id" = $1[0m  [["id", 100]]
+  ↳ app/controllers/vehicles_controller.rb:36:in `destroy'
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:36:in `destroy'
+Redirected to http://localhost:3000/vehicles
+Completed 302 Found in 94ms (ActiveRecord: 39.9ms | Allocations: 17830)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-14 17:29:47 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (4.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:17
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 40.4ms | Allocations: 7897)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 12.7ms | Allocations: 1492)
+  Rendered layout layouts/application.html.erb (Duration: 101.8ms | Allocations: 26831)
+Completed 200 OK in 130ms (Views: 110.6ms | ActiveRecord: 7.7ms | Allocations: 29581)
+
+
+Started DELETE "/vehicle/19" for ::1 at 2021-11-14 17:31:08 +1100
+Processing by VehiclesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"19"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 30ms (ActiveRecord: 11.4ms | Allocations: 7267)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: vehicle
+Did you mean?  controller
+               _method
+               authenticity_token
+               action):
+  
+app/controllers/vehicles_controller.rb:43:in `vehicle_params'
+Started GET "/" for ::1 at 2021-11-14 17:33:23 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 4.1ms | Allocations: 962)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 26.2ms | Allocations: 6294)
+  Rendered layout layouts/application.html.erb (Duration: 47.1ms | Allocations: 15373)
+Completed 200 OK in 52ms (Views: 39.3ms | ActiveRecord: 11.0ms | Allocations: 17013)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:33:25 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 12ms (ActiveRecord: 1.7ms | Allocations: 2918)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: vehicle
+Did you mean?  controller
+               action):
+  
+app/controllers/vehicles_controller.rb:43:in `vehicle_params'
+Started POST "/__web_console/repl_sessions/3716da94079a1423f45fdb6e9a2ed01c/trace" for ::1 at 2021-11-14 17:33:32 +1100
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:37:12 +1100
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 56ms (ActiveRecord: 21.4ms | Allocations: 10121)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: vehicle
+Did you mean?  controller
+               action):
+  
+app/controllers/vehicles_controller.rb:43:in `vehicle_params'
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:43:19 +1100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 39ms (ActiveRecord: 12.2ms | Allocations: 10121)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: vehicle
+Did you mean?  controller
+               action):
+  
+app/controllers/vehicles_controller.rb:44:in `vehicle_params'
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:43:31 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 25ms (ActiveRecord: 9.8ms | Allocations: 7258)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: vehicles
+Did you mean?  controller
+               action):
+  
+app/controllers/vehicles_controller.rb:44:in `vehicle_params'
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:43:37 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 9.9ms | Allocations: 10122)
+
+
+  
+NameError (undefined local variable or method `vehicles' for #<VehiclesController:0x0000000000cfa8>
+Did you mean?  vehicles_url):
+  
+app/controllers/vehicles_controller.rb:44:in `vehicle_params'
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:43:42 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 10.2ms | Allocations: 10082)
+
+
+  
+NameError (undefined local variable or method `vehicle' for #<VehiclesController:0x0000000000e858>
+Did you mean?  vehicles_url):
+  
+app/controllers/vehicles_controller.rb:44:in `vehicle_params'
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:43:47 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 51ms (ActiveRecord: 21.3ms | Allocations: 7462)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: Vehicle
+Did you mean?  controller
+               action):
+  
+app/controllers/vehicles_controller.rb:44:in `vehicle_params'
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:43:54 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 34ms (ActiveRecord: 12.4ms | Allocations: 7230)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: Vehicle
+Did you mean?  controller
+               action):
+  
+app/controllers/vehicles_controller.rb:44:in `vehicle_params'
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:44:02 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 37ms (ActiveRecord: 10.1ms | Allocations: 7231)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: order
+Did you mean?  controller
+               action):
+  
+app/controllers/vehicles_controller.rb:44:in `vehicle_params'
+Started GET "/" for ::1 at 2021-11-14 17:44:46 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 27.8ms | Allocations: 9693)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 39.7ms | Allocations: 6310)
+  Rendered layout layouts/application.html.erb (Duration: 97.4ms | Allocations: 24463)
+Completed 200 OK in 102ms (Views: 89.8ms | ActiveRecord: 10.6ms | Allocations: 26225)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:44:49 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 592.8ms | Allocations: 355846)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 594.0ms | Allocations: 356211)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 636.6ms | Allocations: 364254)
+Completed 200 OK in 693ms (Views: 641.6ms | ActiveRecord: 18.2ms | Allocations: 372595)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:44:55 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 19.9ms | Allocations: 7933)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 20.6ms | Allocations: 8029)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | Allocations: 15711)
+Completed 200 OK in 47ms (Views: 37.0ms | ActiveRecord: 3.2ms | Allocations: 17732)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:45:00 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 28.1ms | Allocations: 7850)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 28.6ms | Allocations: 7946)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 46.8ms | Allocations: 15608)
+Completed 200 OK in 57ms (Views: 47.8ms | ActiveRecord: 0.8ms | Allocations: 17389)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:45:03 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 19.8ms | Allocations: 7868)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 7964)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | Allocations: 15626)
+Completed 200 OK in 43ms (Views: 36.9ms | ActiveRecord: 1.0ms | Allocations: 17410)
+
+
+Started GET "/" for ::1 at 2021-11-14 17:45:05 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.6ms | Allocations: 611)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 13.3ms | Allocations: 1262)
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 9405)
+Completed 200 OK in 46ms (Views: 42.5ms | ActiveRecord: 1.9ms | Allocations: 9864)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:45:10 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 18.1ms | Allocations: 7868)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 18.4ms | Allocations: 7964)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 15625)
+Completed 200 OK in 42ms (Views: 33.0ms | ActiveRecord: 1.1ms | Allocations: 17410)
+
+
+Started POST "/vehicles" for ::1 at 2021-11-14 17:45:18 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"test", "model"=>"test", "body_type"=>"Medium Car", "door_count"=>"2", "seat_count"=>"1"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameters: :authenticity_token, :vehicle, :commit[0m
+[31mUnpermitted parameters: :authenticity_token, :vehicle, :commit[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:24:in `block in create'
+  [1m[36mVehicle Create (1.6ms)[0m  [1m[32mINSERT INTO "vehicles" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-14 06:45:18.365492"], ["updated_at", "2021-11-14 06:45:18.365492"]]
+  ↳ app/controllers/vehicles_controller.rb:24:in `block in create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:24:in `block in create'
+Redirected to 
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 7.5ms | Allocations: 7021)
+
+
+  
+NoMethodError (undefined method `vehicle_url' for #<VehiclesController:0x00000000015658>
+Did you mean?  vehicles_url):
+  
+app/controllers/vehicles_controller.rb:25:in `block (2 levels) in create'
+app/controllers/vehicles_controller.rb:23:in `create'
+Started POST "/vehicles" for ::1 at 2021-11-14 17:49:26 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"test", "model"=>"test", "body_type"=>"Medium Car", "door_count"=>"2", "seat_count"=>"1"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 9.4ms | Allocations: 10128)
+
+
+  
+NameError (undefined local variable or method `vehicle' for #<VehiclesController:0x00000000016f08>
+Did you mean?  vehicles_url):
+  
+app/controllers/vehicles_controller.rb:44:in `vehicle_params'
+Started POST "/vehicles" for ::1 at 2021-11-14 17:49:41 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"test", "model"=>"test", "body_type"=>"Medium Car", "door_count"=>"2", "seat_count"=>"1"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:24:in `block in create'
+  [1m[36mVehicle Create (1.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "test"], ["model", "test"], ["body_type", "Medium Car"], ["door_count", 2], ["seat_count", 1], ["created_at", "2021-11-14 06:49:41.462272"], ["updated_at", "2021-11-14 06:49:41.462272"]]
+  ↳ app/controllers/vehicles_controller.rb:24:in `block in create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:24:in `block in create'
+Redirected to 
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 19.2ms | Allocations: 16580)
+
+
+  
+NoMethodError (undefined method `vehicle_url' for #<VehiclesController:0x00000000018790>
+Did you mean?  vehicles_url):
+  
+app/controllers/vehicles_controller.rb:25:in `block (2 levels) in create'
+app/controllers/vehicles_controller.rb:23:in `create'
+Started POST "/vehicles" for ::1 at 2021-11-14 17:49:59 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"test", "model"=>"test", "body_type"=>"Medium Car", "door_count"=>"2", "seat_count"=>"1"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:24:in `block in create'
+  [1m[36mVehicle Create (7.1ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "test"], ["model", "test"], ["body_type", "Medium Car"], ["door_count", 2], ["seat_count", 1], ["created_at", "2021-11-14 06:49:59.282183"], ["updated_at", "2021-11-14 06:49:59.282183"]]
+  ↳ app/controllers/vehicles_controller.rb:24:in `block in create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:24:in `block in create'
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 27.7ms | Allocations: 17306)
+
+
+  
+NameError (undefined local variable or method `vehicle_url' for #<VehiclesController:0x0000000001a040>
+Did you mean?  vehicles_url):
+  
+app/controllers/vehicles_controller.rb:25:in `block (2 levels) in create'
+app/controllers/vehicles_controller.rb:23:in `create'
+Started POST "/vehicles" for ::1 at 2021-11-14 17:50:08 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"test", "model"=>"test", "body_type"=>"Medium Car", "door_count"=>"2", "seat_count"=>"1"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:24:in `block in create'
+  [1m[36mVehicle Create (1.6ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "test"], ["model", "test"], ["body_type", "Medium Car"], ["door_count", 2], ["seat_count", 1], ["created_at", "2021-11-14 06:50:08.244769"], ["updated_at", "2021-11-14 06:50:08.244769"]]
+  ↳ app/controllers/vehicles_controller.rb:24:in `block in create'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:24:in `block in create'
+Redirected to 
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 24.9ms | Allocations: 16486)
+
+
+  
+NoMethodError (undefined method `new_url' for #<VehiclesController:0x0000000001b990>):
+  
+app/controllers/vehicles_controller.rb:25:in `block (2 levels) in create'
+app/controllers/vehicles_controller.rb:23:in `create'
+Started POST "/vehicles" for ::1 at 2021-11-14 17:50:20 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"test", "model"=>"test", "body_type"=>"Medium Car", "door_count"=>"2", "seat_count"=>"1"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:24:in `block in create'
+  [1m[36mVehicle Create (2.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "test"], ["model", "test"], ["body_type", "Medium Car"], ["door_count", 2], ["seat_count", 1], ["created_at", "2021-11-14 06:50:20.956850"], ["updated_at", "2021-11-14 06:50:20.956850"]]
+  ↳ app/controllers/vehicles_controller.rb:24:in `block in create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:24:in `block in create'
+Redirected to http://localhost:3000/vehicles
+Completed 302 Found in 65ms (ActiveRecord: 22.0ms | Allocations: 14158)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-14 17:50:21 +1100
+Processing by VehiclesController#index as HTML
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 677)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: vehicle
+Did you mean?  controller
+               action):
+  
+app/controllers/vehicles_controller.rb:44:in `vehicle_params'
+Started GET "/vehicles" for ::1 at 2021-11-14 17:50:32 +1100
+Processing by VehiclesController#index as HTML
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 782)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: vehicle
+Did you mean?  controller
+               action):
+  
+app/controllers/vehicles_controller.rb:44:in `vehicle_params'
+Started GET "/vehicles" for ::1 at 2021-11-14 17:50:35 +1100
+Processing by VehiclesController#index as HTML
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 624)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: vehicle
+Did you mean?  controller
+               action):
+  
+app/controllers/vehicles_controller.rb:44:in `vehicle_params'
+Started GET "/" for ::1 at 2021-11-14 17:51:25 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.5ms | Allocations: 794)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 24.5ms | Allocations: 5975)
+  Rendered layout layouts/application.html.erb (Duration: 45.8ms | Allocations: 14509)
+Completed 200 OK in 49ms (Views: 39.9ms | ActiveRecord: 7.5ms | Allocations: 15356)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:51:27 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 16ms (ActiveRecord: 1.5ms | Allocations: 2785)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: vehicle
+Did you mean?  controller
+               action):
+  
+app/controllers/vehicles_controller.rb:44:in `vehicle_params'
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:52:02 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 25.9ms | Allocations: 8514)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 28.9ms | Allocations: 8622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 171)
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 16653)
+Completed 200 OK in 93ms (Views: 51.8ms | ActiveRecord: 14.2ms | Allocations: 28485)
+
+
+Started POST "/vehicles" for ::1 at 2021-11-14 17:52:23 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"REEEEEEEEEEE", "model"=>"REEEEEEEEEEE", "body_type"=>"Medium Car", "door_count"=>"5", "seat_count"=>"12"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:22:in `block in create'
+  [1m[36mVehicle Create (1.8ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "REEEEEEEEEEE"], ["model", "REEEEEEEEEEE"], ["body_type", "Medium Car"], ["door_count", 5], ["seat_count", 12], ["created_at", "2021-11-14 06:52:23.191546"], ["updated_at", "2021-11-14 06:52:23.191546"]]
+  ↳ app/controllers/vehicles_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:22:in `block in create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 7.9ms | Allocations: 4324)
+
+
+Started GET "/" for ::1 at 2021-11-14 17:52:23 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 9.6ms | Allocations: 791)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 14.9ms | Allocations: 1468)
+  Rendered layout layouts/application.html.erb (Duration: 48.4ms | Allocations: 9922)
+Completed 200 OK in 52ms (Views: 48.0ms | ActiveRecord: 2.1ms | Allocations: 10702)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:52:25 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 18.0ms | Allocations: 8017)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 18.8ms | Allocations: 8113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | Allocations: 15774)
+Completed 200 OK in 49ms (Views: 42.3ms | ActiveRecord: 1.3ms | Allocations: 17568)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-14 17:52:26 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:17
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 17.5ms | Allocations: 7919)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 5.5ms | Allocations: 1065)
+  Rendered layout layouts/application.html.erb (Duration: 43.0ms | Allocations: 16612)
+Completed 200 OK in 49ms (Views: 43.0ms | ActiveRecord: 3.5ms | Allocations: 17428)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-14 17:53:04 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 45.7ms | Allocations: 8504)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 46.1ms | Allocations: 8611)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 171)
+  Rendered layout layouts/application.html.erb (Duration: 64.8ms | Allocations: 16523)
+Completed 200 OK in 122ms (Views: 66.8ms | ActiveRecord: 17.0ms | Allocations: 28335)
+
+
+Started POST "/vehicles" for ::1 at 2021-11-14 17:53:13 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"REEEEEEEEEEE", "model"=>"REEEEEEEEEEE", "body_type"=>"Van", "door_count"=>"3", "seat_count"=>"3"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:22:in `block in create'
+  [1m[36mVehicle Create (1.7ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "REEEEEEEEEEE"], ["model", "REEEEEEEEEEE"], ["body_type", "Van"], ["door_count", 3], ["seat_count", 3], ["created_at", "2021-11-14 06:53:13.248787"], ["updated_at", "2021-11-14 06:53:13.248787"]]
+  ↳ app/controllers/vehicles_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:22:in `block in create'
+Redirected to 
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 9.8ms | Allocations: 6695)
+
+
+  
+NoMethodError (undefined method `vehicle_url' for #<VehiclesController:0x000000000225d8>
+Did you mean?  vehicles_url):
+  
+app/controllers/vehicles_controller.rb:23:in `block (2 levels) in create'
+app/controllers/vehicles_controller.rb:21:in `create'
+Started POST "/vehicles" for ::1 at 2021-11-14 17:54:49 +1100
+  
+SyntaxError (/home/richard/Marketplace/src/app/controllers/vehicles_controller.rb:23: syntax error, unexpected '(', expecting '}'
+...at.html { redirect_to @vehicle(params[:id]) }
+...                              ^
+/home/richard/Marketplace/src/app/controllers/vehicles_controller.rb:23: syntax error, unexpected ')', expecting `end'
+...direct_to @vehicle(params[:id]) }
+...                              ^
+):
+  
+app/controllers/vehicles_controller.rb:23: syntax error, unexpected '(', expecting '}'
+app/controllers/vehicles_controller.rb:23: syntax error, unexpected ')', expecting `end'
+app/controllers/vehicles_controller.rb:23: syntax error, unexpected '(', expecting '}'
+app/controllers/vehicles_controller.rb:23: syntax error, unexpected ')', expecting `end'
+app/controllers/vehicles_controller.rb:23: syntax error, unexpected '(', expecting '}'
+app/controllers/vehicles_controller.rb:23: syntax error, unexpected ')', expecting `end'
+Started GET "/" for 127.0.0.1 at 2021-11-14 17:57:07 +1100
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 31.7ms | Allocations: 9932)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 43.9ms | Allocations: 7881)
+  Rendered layout layouts/application.html.erb (Duration: 103.4ms | Allocations: 26384)
+Completed 200 OK in 124ms (Views: 87.9ms | ActiveRecord: 21.1ms | Allocations: 30147)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-14 17:57:11 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 446.8ms | Allocations: 356105)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 448.1ms | Allocations: 356474)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 463.5ms | Allocations: 364517)
+Completed 200 OK in 507ms (Views: 466.7ms | ActiveRecord: 10.8ms | Allocations: 372914)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2021-11-14 17:57:18 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"REEEEEEEEEEE", "model"=>"REEEEEEEEEEE", "body_type"=>"Large Car", "door_count"=>"4", "seat_count"=>"2"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:22:in `block in create'
+  [1m[36mVehicle Create (8.2ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "REEEEEEEEEEE"], ["model", "REEEEEEEEEEE"], ["body_type", "Large Car"], ["door_count", 4], ["seat_count", 2], ["created_at", "2021-11-14 06:57:18.359150"], ["updated_at", "2021-11-14 06:57:18.359150"]]
+  ↳ app/controllers/vehicles_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:22:in `block in create'
+Redirected to 
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 21.1ms | Allocations: 7311)
+
+
+  
+NoMethodError (undefined method `vehicle_url' for #<VehiclesController:0x0000000000a370>
+Did you mean?  vehicles_url):
+  
+app/controllers/vehicles_controller.rb:23:in `block (2 levels) in create'
+app/controllers/vehicles_controller.rb:21:in `create'
+Started POST "/vehicles" for 127.0.0.1 at 2021-11-14 18:01:12 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"REEEEEEEEEEE", "model"=>"REEEEEEEEEEE", "body_type"=>"Large Car", "door_count"=>"4", "seat_count"=>"2"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:21:in `block in create'
+  [1m[36mVehicle Create (1.6ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "REEEEEEEEEEE"], ["model", "REEEEEEEEEEE"], ["body_type", "Large Car"], ["door_count", 4], ["seat_count", 2], ["created_at", "2021-11-14 07:01:12.718032"], ["updated_at", "2021-11-14 07:01:12.718032"]]
+  ↳ app/controllers/vehicles_controller.rb:21:in `block in create'
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:21:in `block in create'
+Redirected to http://127.0.0.1:3000/vehicle/112
+Completed 302 Found in 71ms (ActiveRecord: 25.9ms | Allocations: 14310)
+
+
+Started GET "/vehicle/112" for 127.0.0.1 at 2021-11-14 18:01:12 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mVehicle Load (1.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 253)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 5.7ms | Allocations: 1312)
+  Rendered layout layouts/application.html.erb (Duration: 39.7ms | Allocations: 9480)
+Completed 200 OK in 49ms (Views: 39.1ms | ActiveRecord: 3.8ms | Allocations: 11427)
+
+
+Started GET "/vehicle/112" for 127.0.0.1 at 2021-11-14 18:01:48 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mVehicle Load (1.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 80)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 31.4ms | Allocations: 5522)
+  Rendered layout layouts/application.html.erb (Duration: 48.7ms | Allocations: 13472)
+Completed 200 OK in 81ms (Views: 34.6ms | ActiveRecord: 26.4ms | Allocations: 20146)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-14 18:01:50 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 15.9ms | Allocations: 8481)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 16.8ms | Allocations: 8585)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 16406)
+Completed 200 OK in 51ms (Views: 40.7ms | ActiveRecord: 0.7ms | Allocations: 19086)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2021-11-14 18:01:52 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"REEEEEEEEEEE", "model"=>"REEEEEEEEEEE", "body_type"=>"Large Car", "door_count"=>"4", "seat_count"=>"2"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:21:in `block in create'
+  [1m[36mVehicle Create (1.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "REEEEEEEEEEE"], ["model", "REEEEEEEEEEE"], ["body_type", "Large Car"], ["door_count", 4], ["seat_count", 2], ["created_at", "2021-11-14 07:01:52.425019"], ["updated_at", "2021-11-14 07:01:52.425019"]]
+  ↳ app/controllers/vehicles_controller.rb:21:in `block in create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:21:in `block in create'
+Redirected to 
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 6.6ms | Allocations: 4548)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/vehicles_controller.rb:22:in `block (2 levels) in create'
+app/controllers/vehicles_controller.rb:20:in `create'
+Started POST "/vehicles" for 127.0.0.1 at 2021-11-14 18:02:46 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"REEEEEEEEEEE", "model"=>"REEEEEEEEEEE", "body_type"=>"Large Car", "door_count"=>"4", "seat_count"=>"2"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:21:in `block in create'
+  [1m[36mVehicle Create (1.8ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "REEEEEEEEEEE"], ["model", "REEEEEEEEEEE"], ["body_type", "Large Car"], ["door_count", 4], ["seat_count", 2], ["created_at", "2021-11-14 07:02:46.353941"], ["updated_at", "2021-11-14 07:02:46.353941"]]
+  ↳ app/controllers/vehicles_controller.rb:21:in `block in create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:21:in `block in create'
+Redirected to http://127.0.0.1:3000/vehicle/114
+Completed 302 Found in 65ms (ActiveRecord: 20.9ms | Allocations: 14194)
+
+
+Started GET "/vehicle/114" for 127.0.0.1 at 2021-11-14 18:02:46 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"114"}
+  [1m[36mVehicle Load (1.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 114], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 8.0ms | Allocations: 1618)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 10136)
+Completed 200 OK in 39ms (Views: 28.2ms | ActiveRecord: 3.4ms | Allocations: 12628)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2021-11-14 18:02:49 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (2.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:17
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 29.5ms | Allocations: 8159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 7.4ms | Allocations: 1065)
+  Rendered layout layouts/application.html.erb (Duration: 58.4ms | Allocations: 16878)
+Completed 200 OK in 65ms (Views: 56.7ms | ActiveRecord: 4.0ms | Allocations: 17685)
+
+
+Started GET "/vehicle/9" for 127.0.0.1 at 2021-11-14 18:02:50 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mVehicle Load (3.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 47)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 6.0ms | Allocations: 1079)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 8757)
+Completed 200 OK in 40ms (Views: 31.3ms | ActiveRecord: 5.2ms | Allocations: 9958)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-14 18:02:52 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 4.9ms | Allocations: 934)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 8.8ms | Allocations: 1468)
+  Rendered layout layouts/application.html.erb (Duration: 42.9ms | Allocations: 10065)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 1.8ms | Allocations: 11370)
+
+
