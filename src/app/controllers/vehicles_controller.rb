@@ -13,9 +13,12 @@ class VehiclesController < ApplicationController
 
 
   def new
+    @vehicle = Vehicle.new
   end
 
   def create
+    @vehicle = Vehicle.new(vehicle_params)
+    @vehicle.user_id = current_user.id
   end
 
   def update

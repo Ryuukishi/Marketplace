@@ -1,0 +1,15 @@
+<%= simple_form_for vehicle do |f| %>
+  <%= f.error_notification %>
+
+
+    <%= f.input :brand, required: true %>
+    <%= f.input :model, required: true %>
+    <%= f.input :body_type, required: true, collection: ['Small Car', 'Medium Car', 'Large Car', 'Station Wagon', 'SUV', 'Van', 'Ute', 'People Mover', 'Convertible' ] %>
+    <%= f.input :door_count, required: true, collection: 2..5 %>
+    <%= f.input :seat_count, required: true, collection: 1..12 %>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary" %>
+    <%= link_to 'Cancel', :back, class: 'btn btn-outline-primary' %>
+  </div>
+<% end %>

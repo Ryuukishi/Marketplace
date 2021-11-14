@@ -11,6 +11,9 @@
       <li class="nav-item">
         <%= link_to "Cars", vehicles_path, class: "nav-link" %>
       </li>
+      <li class="nav-item">
+        <%= link_to "New Car", new_vehicle_path, class: "nav-link" %>
+      </li>
       <% if user_signed_in? %>
         <%# <li class="nav-item">
           <%= link_to "My cars", user_vehicle_path, class: "nav-link" %>
