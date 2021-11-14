@@ -1,6 +1,6 @@
 class VehiclesController < ApplicationController
   
-  # before_action :set_vehicle
+  before_action :vehicle_params
 
 
   def index
@@ -17,8 +17,15 @@ class VehiclesController < ApplicationController
   end
 
   def create
-    @vehicle = Vehicle.new(vehicle_params)
-    @vehicle.user_id = current_user.id
+    @vehicle = Vehicle.new vehicle_params
+    # @vehicle.user_id = current_user.id
+    respond_to do |format|
+      if @vehicle.save
+        format.html { redirect_to vehicles_path }
+      else
+        format.html { render :new }
+      end
+    end
   end
 
   def update
@@ -32,7 +39,8 @@ class VehiclesController < ApplicationController
 
   private
   
-  # def set_vehicle
-  #   @vehicle = Vehicle.find(params[:id])
-  # end
+  def vehicle_params
+    params.permit(:brand, :model, :body_type, :door_count)
+  end
+
 end
