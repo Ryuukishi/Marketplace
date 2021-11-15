@@ -8980,3 +8980,295 @@ Processing by HomeController#page as HTML
 Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 1.8ms | Allocations: 11370)
 
 
+Started GET "/" for 127.0.0.1 at 2021-11-15 11:08:17 +1100
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 60.8ms | Allocations: 9932)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 39.5ms | Allocations: 8498)
+  Rendered layout layouts/application.html.erb (Duration: 134.3ms | Allocations: 27039)
+Completed 200 OK in 152ms (Views: 124.8ms | ActiveRecord: 14.6ms | Allocations: 30704)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-15 11:08:23 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mVehicle Load (1.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:8:in `show'
+Completed 404 Not Found in 20ms (ActiveRecord: 7.4ms | Allocations: 3145)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vehicle with 'id'=new):
+  
+app/controllers/vehicles_controller.rb:8:in `show'
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-15 11:09:02 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mVehicle Load (1.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:8:in `show'
+Completed 404 Not Found in 16ms (ActiveRecord: 9.2ms | Allocations: 3192)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vehicle with 'id'=new):
+  
+app/controllers/vehicles_controller.rb:8:in `show'
+Started GET "/" for 127.0.0.1 at 2021-11-15 11:09:12 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.8ms | Allocations: 794)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 29.3ms | Allocations: 5738)
+  Rendered layout layouts/application.html.erb (Duration: 50.2ms | Allocations: 14216)
+Completed 200 OK in 54ms (Views: 43.1ms | ActiveRecord: 9.2ms | Allocations: 15000)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-15 11:09:14 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mVehicle Load (3.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:8:in `show'
+Completed 404 Not Found in 8ms (ActiveRecord: 3.1ms | Allocations: 1357)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vehicle with 'id'=new):
+  
+app/controllers/vehicles_controller.rb:8:in `show'
+Started GET "/" for 127.0.0.1 at 2021-11-15 11:09:24 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.4ms | Allocations: 613)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 10.0ms | Allocations: 1273)
+  Rendered layout layouts/application.html.erb (Duration: 43.6ms | Allocations: 9440)
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 1.8ms | Allocations: 9915)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-15 11:09:27 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mVehicle Load (1.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:8:in `show'
+Completed 404 Not Found in 6ms (ActiveRecord: 1.2ms | Allocations: 1283)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vehicle with 'id'=new):
+  
+app/controllers/vehicles_controller.rb:8:in `show'
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-15 11:09:32 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mVehicle Load (2.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:8:in `show'
+Completed 404 Not Found in 25ms (ActiveRecord: 14.8ms | Allocations: 3197)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vehicle with 'id'=new):
+  
+app/controllers/vehicles_controller.rb:8:in `show'
+Started GET "/" for 127.0.0.1 at 2021-11-15 11:09:41 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.6ms | Allocations: 794)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 36.3ms | Allocations: 5736)
+  Rendered layout layouts/application.html.erb (Duration: 64.1ms | Allocations: 14175)
+Completed 200 OK in 72ms (Views: 62.3ms | ActiveRecord: 8.7ms | Allocations: 14958)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-15 11:09:43 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mVehicle Load (6.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:8:in `show'
+Completed 404 Not Found in 10ms (ActiveRecord: 6.4ms | Allocations: 1339)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vehicle with 'id'=new):
+  
+app/controllers/vehicles_controller.rb:8:in `show'
+Started GET "/" for 127.0.0.1 at 2021-11-15 11:11:21 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.7ms | Allocations: 794)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 31.7ms | Allocations: 5991)
+  Rendered layout layouts/application.html.erb (Duration: 53.3ms | Allocations: 14450)
+Completed 200 OK in 57ms (Views: 42.9ms | ActiveRecord: 12.5ms | Allocations: 15304)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-15 11:11:23 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 446.7ms | Allocations: 355913)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 449.3ms | Allocations: 356280)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 465.8ms | Allocations: 364225)
+Completed 200 OK in 515ms (Views: 473.1ms | ActiveRecord: 16.0ms | Allocations: 372521)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-15 11:12:13 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/vehicles/new"):
+  
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-15 11:12:43 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/vehicles/new"):
+  
+Started GET "/" for 127.0.0.1 at 2021-11-15 11:12:47 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.7ms | Allocations: 794)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 28.1ms | Allocations: 4354)
+  Rendered layout layouts/application.html.erb (Duration: 59.8ms | Allocations: 12770)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.0ms | Allocations: 13592)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `vehicles_path' for #<ActionView::Base:0x00000000012a70>
+Did you mean?  vehicle_path):
+     9:         <%= link_to "Wild Speed", root_path, class: "nav-link" %>
+    10:       </li>
+    11:       <li class="nav-item">
+    12:         <%= link_to "Cars", vehicles_path, class: "nav-link" %>
+    13:       </li>
+    14:       <li class="nav-item">
+    15:         <%= link_to "New Car", new_vehicle_path, class: "nav-link" %>
+  
+app/views/shared/_nav.html.erb:12
+app/views/layouts/application.html.erb:20
+Started GET "/" for 127.0.0.1 at 2021-11-15 11:13:09 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.0ms | Allocations: 794)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 21.4ms | Allocations: 4327)
+  Rendered layout layouts/application.html.erb (Duration: 46.1ms | Allocations: 12781)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.0ms | Allocations: 13595)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `vehicles_path' for #<ActionView::Base:0x000000000141e0>
+Did you mean?  vehicle_path):
+     9:         <%= link_to "Wild Speed", root_path, class: "nav-link" %>
+    10:       </li>
+    11:       <li class="nav-item">
+    12:         <%= link_to "Cars", vehicles_path, class: "nav-link" %>
+    13:       </li>
+    14:       <li class="nav-item">
+    15:         <%= link_to "New Car", new_vehicle_path, class: "nav-link" %>
+  
+app/views/shared/_nav.html.erb:12
+app/views/layouts/application.html.erb:20
+Started GET "/" for 127.0.0.1 at 2021-11-15 11:13:59 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 6.3ms | Allocations: 941)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 14.1ms | Allocations: 3671)
+  Rendered layout layouts/application.html.erb (Duration: 44.2ms | Allocations: 12606)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms | Allocations: 14206)
+
+
+  
+ActionView::Template::Error (undefined method `index_path' for #<ActionView::Base:0x000000000159c8>
+Did you mean?  video_path):
+     9:         <%= link_to "Wild Speed", root_path, class: "nav-link" %>
+    10:       </li>
+    11:       <li class="nav-item">
+    12:         <%= link_to "Cars", :index, class: "nav-link" %>
+    13:       </li>
+    14:       <li class="nav-item">
+    15:         <%= link_to "New Car", new_vehicle_path, class: "nav-link" %>
+  
+app/views/shared/_nav.html.erb:12
+app/views/layouts/application.html.erb:20
+Started GET "/" for 127.0.0.1 at 2021-11-15 11:14:05 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.1ms | Allocations: 935)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 18.6ms | Allocations: 3622)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 12571)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms | Allocations: 14002)
+
+
+  
+ActionView::Template::Error (undefined method `show_path' for #<ActionView::Base:0x00000000015f18>):
+     9:         <%= link_to "Wild Speed", root_path, class: "nav-link" %>
+    10:       </li>
+    11:       <li class="nav-item">
+    12:         <%= link_to "Cars", :show, class: "nav-link" %>
+    13:       </li>
+    14:       <li class="nav-item">
+    15:         <%= link_to "New Car", new_vehicle_path, class: "nav-link" %>
+  
+app/views/shared/_nav.html.erb:12
+app/views/layouts/application.html.erb:20
+Started GET "/" for 127.0.0.1 at 2021-11-15 11:14:32 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 4.2ms | Allocations: 938)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 31.6ms | Allocations: 6283)
+  Rendered layout layouts/application.html.erb (Duration: 66.2ms | Allocations: 15239)
+Completed 200 OK in 75ms (Views: 59.4ms | ActiveRecord: 13.6ms | Allocations: 16870)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-15 11:14:33 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mVehicle Load (2.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:8:in `show'
+Completed 404 Not Found in 19ms (ActiveRecord: 9.4ms | Allocations: 2953)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vehicle with 'id'=new):
+  
+app/controllers/vehicles_controller.rb:8:in `show'
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-15 11:14:41 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 30.0ms | Allocations: 8816)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 31.6ms | Allocations: 9168)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 171)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | Allocations: 17104)
+Completed 200 OK in 103ms (Views: 50.7ms | ActiveRecord: 16.2ms | Allocations: 29434)
+
+
