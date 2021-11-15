@@ -9272,3 +9272,1449 @@ Processing by VehiclesController#new as HTML
 Completed 200 OK in 103ms (Views: 50.7ms | ActiveRecord: 16.2ms | Allocations: 29434)
 
 
+Started GET "/" for ::1 at 2021-11-15 15:25:00 +1100
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 32.3ms | Allocations: 9933)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 3.5ms | Allocations: 689)
+  Rendered layout layouts/application.html.erb (Duration: 59.9ms | Allocations: 19227)
+Completed 200 OK in 77ms (Views: 64.1ms | ActiveRecord: 0.0ms | Allocations: 22894)
+
+
+Started GET "/" for ::1 at 2021-11-15 15:25:02 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.3ms | Allocations: 633)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 242)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 8453)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 9016)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-15 15:25:07 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (3.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:17
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 34.1ms | Allocations: 13907)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 266)
+  Rendered layout layouts/application.html.erb (Duration: 59.5ms | Allocations: 22053)
+Completed 200 OK in 69ms (Views: 49.4ms | ActiveRecord: 11.7ms | Allocations: 23959)
+
+
+Started DELETE "/vehicle/9" for ::1 at 2021-11-15 15:25:16 +1100
+Processing by VehiclesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"9"}
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 1220)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 15:25:16 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 688)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 59.9ms | Allocations: 17857)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 70.7ms | Allocations: 26000)
+Completed 200 OK in 86ms (Views: 73.0ms | ActiveRecord: 4.1ms | Allocations: 32602)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-11-15 15:25:18 +1100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 291ms (ActiveRecord: 3.8ms | Allocations: 6305)
+
+
+Started GET "/" for ::1 at 2021-11-15 15:25:19 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 4.1ms | Allocations: 713)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 4.9ms | Allocations: 1469)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 9783)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 1.2ms | Allocations: 10324)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-15 15:25:21 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 21.3ms | Allocations: 9595)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 27.1ms | Allocations: 9934)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 156)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 17775)
+Completed 200 OK in 54ms (Views: 45.2ms | ActiveRecord: 2.0ms | Allocations: 19739)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-15 15:25:22 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (2.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:17
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 7865)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 5.3ms | Allocations: 1121)
+  Rendered layout layouts/application.html.erb (Duration: 41.5ms | Allocations: 16615)
+Completed 200 OK in 45ms (Views: 38.3ms | ActiveRecord: 4.0ms | Allocations: 17327)
+
+
+Started DELETE "/vehicle/9" for ::1 at 2021-11-15 15:25:26 +1100
+Processing by VehiclesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"9"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVehicle Load (0.9ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:34:in `destroy'
+  [1m[36mVehicle Destroy (1.2ms)[0m  [1m[31mDELETE FROM "vehicles" WHERE "vehicles"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `destroy'
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:34:in `destroy'
+Redirected to http://localhost:3000/vehicles
+Completed 302 Found in 24ms (ActiveRecord: 10.5ms | Allocations: 4318)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-15 15:25:26 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (2.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:17
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 23.8ms | Allocations: 7713)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 6.4ms | Allocations: 1065)
+  Rendered layout layouts/application.html.erb (Duration: 54.1ms | Allocations: 16406)
+Completed 200 OK in 57ms (Views: 49.1ms | ActiveRecord: 5.7ms | Allocations: 17013)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Wild_Speed_development"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Wild_Speed_test"[0m
+  [1m[35m (120.5ms)[0m  [1m[35mCREATE DATABASE "Wild_Speed_development" ENCODING = 'unicode'[0m
+  [1m[35m (68.7ms)[0m  [1m[35mCREATE DATABASE "Wild_Speed_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "booking_dates" CASCADE[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "booking_dates" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "vehicles" CASCADE[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "brand" character varying, "model" character varying, "body_type" character varying, "door_count" integer, "seat_count" integer, "available" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211113050103)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211111095731),
+(20211112052117);
+
+[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-15 04:26:12.012231"], ["updated_at", "2021-11-15 04:26:12.012231"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "3cad708e9a43a8f0cef39e54b5f5ef69cb0a85f5"], ["created_at", "2021-11-15 04:26:12.025121"], ["updated_at", "2021-11-15 04:26:12.025121"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "booking_dates" CASCADE[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "booking_dates" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "vehicles" CASCADE[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "brand" character varying, "model" character varying, "body_type" character varying, "door_count" integer, "seat_count" integer, "available" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211113050103)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211111095731),
+(20211112052117);
+
+[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-15 04:26:12.119147"], ["updated_at", "2021-11-15 04:26:12.119147"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-11-15 04:26:12.128938"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "3cad708e9a43a8f0cef39e54b5f5ef69cb0a85f5"], ["created_at", "2021-11-15 04:26:12.135941"], ["updated_at", "2021-11-15 04:26:12.135941"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.6ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.179801"], ["updated_at", "2021-11-15 04:26:12.179801"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.4ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.186111"], ["updated_at", "2021-11-15 04:26:12.186111"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.192523"], ["updated_at", "2021-11-15 04:26:12.192523"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.4ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.197866"], ["updated_at", "2021-11-15 04:26:12.197866"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.202815"], ["updated_at", "2021-11-15 04:26:12.202815"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.208084"], ["updated_at", "2021-11-15 04:26:12.208084"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.213574"], ["updated_at", "2021-11-15 04:26:12.213574"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.4ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.218953"], ["updated_at", "2021-11-15 04:26:12.218953"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.224477"], ["updated_at", "2021-11-15 04:26:12.224477"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.4ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.229709"], ["updated_at", "2021-11-15 04:26:12.229709"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.235416"], ["updated_at", "2021-11-15 04:26:12.235416"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.241055"], ["updated_at", "2021-11-15 04:26:12.241055"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.246509"], ["updated_at", "2021-11-15 04:26:12.246509"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.251805"], ["updated_at", "2021-11-15 04:26:12.251805"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.257277"], ["updated_at", "2021-11-15 04:26:12.257277"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.262598"], ["updated_at", "2021-11-15 04:26:12.262598"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.2ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.267925"], ["updated_at", "2021-11-15 04:26:12.267925"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.2ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.273182"], ["updated_at", "2021-11-15 04:26:12.273182"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.278595"], ["updated_at", "2021-11-15 04:26:12.278595"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.291829"], ["updated_at", "2021-11-15 04:26:12.291829"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.297698"], ["updated_at", "2021-11-15 04:26:12.297698"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.303344"], ["updated_at", "2021-11-15 04:26:12.303344"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.309170"], ["updated_at", "2021-11-15 04:26:12.309170"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.314895"], ["updated_at", "2021-11-15 04:26:12.314895"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.320293"], ["updated_at", "2021-11-15 04:26:12.320293"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.325766"], ["updated_at", "2021-11-15 04:26:12.325766"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.331364"], ["updated_at", "2021-11-15 04:26:12.331364"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.337425"], ["updated_at", "2021-11-15 04:26:12.337425"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.343051"], ["updated_at", "2021-11-15 04:26:12.343051"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.348444"], ["updated_at", "2021-11-15 04:26:12.348444"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBookingDate Create (0.3ms)[0m  [1m[32mINSERT INTO "booking_dates" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-11-15 04:26:12.353355"], ["updated_at", "2021-11-15 04:26:12.353355"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.5ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Buick"], ["model", "Charger"], ["body_type", "Sedan"], ["door_count", 1], ["seat_count", 6], ["available", true], ["created_at", "2021-11-15 04:26:12.642407"], ["updated_at", "2021-11-15 04:26:12.642407"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Lincoln"], ["model", "Challenger"], ["body_type", "Extended Cab Pickup"], ["door_count", 2], ["seat_count", 1], ["available", true], ["created_at", "2021-11-15 04:26:12.649877"], ["updated_at", "2021-11-15 04:26:12.649877"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Lincoln"], ["model", "Encore"], ["body_type", "Extended Cab Pickup"], ["door_count", 2], ["seat_count", 8], ["available", true], ["created_at", "2021-11-15 04:26:12.656017"], ["updated_at", "2021-11-15 04:26:12.656017"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "Rogue"], ["body_type", "Cargo Van"], ["door_count", 3], ["seat_count", 4], ["available", true], ["created_at", "2021-11-15 04:26:12.661592"], ["updated_at", "2021-11-15 04:26:12.661592"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Dodge"], ["model", "Malibu"], ["body_type", "Extended Cab Pickup"], ["door_count", 3], ["seat_count", 7], ["available", true], ["created_at", "2021-11-15 04:26:12.667296"], ["updated_at", "2021-11-15 04:26:12.667296"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "A5"], ["body_type", "Crew Cab Pickup"], ["door_count", 1], ["seat_count", 8], ["available", true], ["created_at", "2021-11-15 04:26:12.672784"], ["updated_at", "2021-11-15 04:26:12.672784"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Audi"], ["model", "Civic"], ["body_type", "Coupe"], ["door_count", 2], ["seat_count", 5], ["available", true], ["created_at", "2021-11-15 04:26:12.678595"], ["updated_at", "2021-11-15 04:26:12.678595"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Dodge"], ["model", "Enclave"], ["body_type", "Regular Cab Pickup"], ["door_count", 4], ["seat_count", 7], ["available", true], ["created_at", "2021-11-15 04:26:12.684278"], ["updated_at", "2021-11-15 04:26:12.684278"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Toyota"], ["model", "Charger"], ["body_type", "Regular Cab Pickup"], ["door_count", 1], ["seat_count", 7], ["available", true], ["created_at", "2021-11-15 04:26:12.690868"], ["updated_at", "2021-11-15 04:26:12.690868"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "X3"], ["body_type", "Wagon"], ["door_count", 3], ["seat_count", 7], ["available", true], ["created_at", "2021-11-15 04:26:12.698394"], ["updated_at", "2021-11-15 04:26:12.698394"]]
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "BMW"], ["model", "Riveria"], ["body_type", "Passenger Van"], ["door_count", 1], ["seat_count", 1], ["available", true], ["created_at", "2021-11-15 04:26:12.711918"], ["updated_at", "2021-11-15 04:26:12.711918"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "Fiesta"], ["body_type", "Crew Cab Pickup"], ["door_count", 1], ["seat_count", 7], ["available", true], ["created_at", "2021-11-15 04:26:12.722086"], ["updated_at", "2021-11-15 04:26:12.722086"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Chevy"], ["model", "Riveria"], ["body_type", "Regular Cab Pickup"], ["door_count", 4], ["seat_count", 7], ["available", true], ["created_at", "2021-11-15 04:26:12.730774"], ["updated_at", "2021-11-15 04:26:12.730774"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "BMW"], ["model", "S5"], ["body_type", "Crew Cab Pickup"], ["door_count", 4], ["seat_count", 5], ["available", true], ["created_at", "2021-11-15 04:26:12.736821"], ["updated_at", "2021-11-15 04:26:12.736821"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Honda"], ["model", "Durango"], ["body_type", "Passenger Van"], ["door_count", 1], ["seat_count", 5], ["available", true], ["created_at", "2021-11-15 04:26:12.742304"], ["updated_at", "2021-11-15 04:26:12.742304"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "Camero"], ["body_type", "Crew Cab Pickup"], ["door_count", 3], ["seat_count", 8], ["available", true], ["created_at", "2021-11-15 04:26:12.747914"], ["updated_at", "2021-11-15 04:26:12.747914"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Buick"], ["model", "Navigator"], ["body_type", "Cargo Van"], ["door_count", 2], ["seat_count", 3], ["available", true], ["created_at", "2021-11-15 04:26:12.753915"], ["updated_at", "2021-11-15 04:26:12.753915"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "BMW"], ["model", "Civic"], ["body_type", "Minivan"], ["door_count", 4], ["seat_count", 6], ["available", true], ["created_at", "2021-11-15 04:26:12.769854"], ["updated_at", "2021-11-15 04:26:12.769854"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Chevy"], ["model", "A4"], ["body_type", "Minivan"], ["door_count", 3], ["seat_count", 8], ["available", true], ["created_at", "2021-11-15 04:26:12.775755"], ["updated_at", "2021-11-15 04:26:12.775755"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "X1"], ["body_type", "Coupe"], ["door_count", 1], ["seat_count", 3], ["available", true], ["created_at", "2021-11-15 04:26:12.781562"], ["updated_at", "2021-11-15 04:26:12.781562"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "Camero"], ["body_type", "Coupe"], ["door_count", 1], ["seat_count", 8], ["available", true], ["created_at", "2021-11-15 04:26:12.787398"], ["updated_at", "2021-11-15 04:26:12.787398"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "Malibu"], ["body_type", "SUV"], ["door_count", 3], ["seat_count", 3], ["available", true], ["created_at", "2021-11-15 04:26:12.792902"], ["updated_at", "2021-11-15 04:26:12.792902"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "BMW"], ["model", "Malibu"], ["body_type", "Regular Cab Pickup"], ["door_count", 1], ["seat_count", 5], ["available", true], ["created_at", "2021-11-15 04:26:12.798641"], ["updated_at", "2021-11-15 04:26:12.798641"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "MKX"], ["body_type", "Hatchback"], ["door_count", 4], ["seat_count", 8], ["available", true], ["created_at", "2021-11-15 04:26:12.804121"], ["updated_at", "2021-11-15 04:26:12.804121"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Audi"], ["model", "MKZ"], ["body_type", "Extended Cab Pickup"], ["door_count", 1], ["seat_count", 6], ["available", true], ["created_at", "2021-11-15 04:26:12.809859"], ["updated_at", "2021-11-15 04:26:12.809859"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "Juke"], ["body_type", "Passenger Van"], ["door_count", 2], ["seat_count", 5], ["available", true], ["created_at", "2021-11-15 04:26:12.815378"], ["updated_at", "2021-11-15 04:26:12.815378"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "A4"], ["body_type", "Hatchback"], ["door_count", 4], ["seat_count", 1], ["available", true], ["created_at", "2021-11-15 04:26:12.821461"], ["updated_at", "2021-11-15 04:26:12.821461"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "Juke"], ["body_type", "Minivan"], ["door_count", 2], ["seat_count", 4], ["available", true], ["created_at", "2021-11-15 04:26:12.827001"], ["updated_at", "2021-11-15 04:26:12.827001"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Lincoln"], ["model", "Charger"], ["body_type", "Crew Cab Pickup"], ["door_count", 2], ["seat_count", 2], ["available", true], ["created_at", "2021-11-15 04:26:12.832491"], ["updated_at", "2021-11-15 04:26:12.832491"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "BMW"], ["model", "Encore"], ["body_type", "Cargo Van"], ["door_count", 4], ["seat_count", 2], ["available", true], ["created_at", "2021-11-15 04:26:12.837879"], ["updated_at", "2021-11-15 04:26:12.837879"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Toyota"], ["model", "Fiesta"], ["body_type", "Extended Cab Pickup"], ["door_count", 1], ["seat_count", 2], ["available", true], ["created_at", "2021-11-15 04:26:12.843492"], ["updated_at", "2021-11-15 04:26:12.843492"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Chevy"], ["model", "Camero"], ["body_type", "Sedan"], ["door_count", 3], ["seat_count", 6], ["available", true], ["created_at", "2021-11-15 04:26:12.848940"], ["updated_at", "2021-11-15 04:26:12.848940"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Honda"], ["model", "Regal"], ["body_type", "Hatchback"], ["door_count", 4], ["seat_count", 5], ["available", true], ["created_at", "2021-11-15 04:26:12.854489"], ["updated_at", "2021-11-15 04:26:12.854489"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Honda"], ["model", "MKZ"], ["body_type", "Minivan"], ["door_count", 2], ["seat_count", 7], ["available", true], ["created_at", "2021-11-15 04:26:12.859913"], ["updated_at", "2021-11-15 04:26:12.859913"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "Fiesta"], ["body_type", "Wagon"], ["door_count", 3], ["seat_count", 1], ["available", true], ["created_at", "2021-11-15 04:26:12.865448"], ["updated_at", "2021-11-15 04:26:12.865448"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Buick"], ["model", "MKZ"], ["body_type", "SUV"], ["door_count", 3], ["seat_count", 3], ["available", true], ["created_at", "2021-11-15 04:26:12.871479"], ["updated_at", "2021-11-15 04:26:12.871479"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Audi"], ["model", "S5"], ["body_type", "Regular Cab Pickup"], ["door_count", 2], ["seat_count", 5], ["available", true], ["created_at", "2021-11-15 04:26:12.877078"], ["updated_at", "2021-11-15 04:26:12.877078"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "Charger"], ["body_type", "Passenger Van"], ["door_count", 4], ["seat_count", 3], ["available", true], ["created_at", "2021-11-15 04:26:12.882408"], ["updated_at", "2021-11-15 04:26:12.882408"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Buick"], ["model", "Cube"], ["body_type", "Crew Cab Pickup"], ["door_count", 1], ["seat_count", 2], ["available", true], ["created_at", "2021-11-15 04:26:12.887843"], ["updated_at", "2021-11-15 04:26:12.887843"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Honda"], ["model", "Malibu"], ["body_type", "Sedan"], ["door_count", 4], ["seat_count", 3], ["available", true], ["created_at", "2021-11-15 04:26:12.893212"], ["updated_at", "2021-11-15 04:26:12.893212"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "A5"], ["body_type", "Convertible"], ["door_count", 1], ["seat_count", 5], ["available", true], ["created_at", "2021-11-15 04:26:12.898912"], ["updated_at", "2021-11-15 04:26:12.898912"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Audi"], ["model", "Malibu"], ["body_type", "SUV"], ["door_count", 2], ["seat_count", 4], ["available", true], ["created_at", "2021-11-15 04:26:12.906317"], ["updated_at", "2021-11-15 04:26:12.906317"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Lincoln"], ["model", "Focus"], ["body_type", "Crew Cab Pickup"], ["door_count", 3], ["seat_count", 3], ["available", true], ["created_at", "2021-11-15 04:26:12.912336"], ["updated_at", "2021-11-15 04:26:12.912336"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Audi"], ["model", "Camry"], ["body_type", "Wagon"], ["door_count", 3], ["seat_count", 7], ["available", true], ["created_at", "2021-11-15 04:26:12.918334"], ["updated_at", "2021-11-15 04:26:12.918334"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Lincoln"], ["model", "X3"], ["body_type", "Cargo Van"], ["door_count", 2], ["seat_count", 1], ["available", true], ["created_at", "2021-11-15 04:26:12.925354"], ["updated_at", "2021-11-15 04:26:12.925354"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "Charger"], ["body_type", "Regular Cab Pickup"], ["door_count", 1], ["seat_count", 3], ["available", true], ["created_at", "2021-11-15 04:26:12.931108"], ["updated_at", "2021-11-15 04:26:12.931108"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "BMW"], ["model", "Encore"], ["body_type", "Coupe"], ["door_count", 1], ["seat_count", 2], ["available", true], ["created_at", "2021-11-15 04:26:12.936791"], ["updated_at", "2021-11-15 04:26:12.936791"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Lincoln"], ["model", "X5"], ["body_type", "Cargo Van"], ["door_count", 1], ["seat_count", 5], ["available", true], ["created_at", "2021-11-15 04:26:12.942850"], ["updated_at", "2021-11-15 04:26:12.942850"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.5ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Lincoln"], ["model", "Prius"], ["body_type", "Convertible"], ["door_count", 3], ["seat_count", 8], ["available", true], ["created_at", "2021-11-15 04:26:12.948859"], ["updated_at", "2021-11-15 04:26:12.948859"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Honda"], ["model", "Camry"], ["body_type", "Regular Cab Pickup"], ["door_count", 4], ["seat_count", 4], ["available", true], ["created_at", "2021-11-15 04:26:12.955774"], ["updated_at", "2021-11-15 04:26:12.955774"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "BMW"], ["model", "Silverado"], ["body_type", "Coupe"], ["door_count", 1], ["seat_count", 1], ["available", true], ["created_at", "2021-11-15 04:26:12.961890"], ["updated_at", "2021-11-15 04:26:12.961890"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Buick"], ["model", "Rogue"], ["body_type", "Cargo Van"], ["door_count", 1], ["seat_count", 7], ["available", true], ["created_at", "2021-11-15 04:26:12.967908"], ["updated_at", "2021-11-15 04:26:12.967908"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Buick"], ["model", "A8"], ["body_type", "SUV"], ["door_count", 2], ["seat_count", 7], ["available", true], ["created_at", "2021-11-15 04:26:12.975238"], ["updated_at", "2021-11-15 04:26:12.975238"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Audi"], ["model", "Versa"], ["body_type", "Coupe"], ["door_count", 2], ["seat_count", 6], ["available", true], ["created_at", "2021-11-15 04:26:12.981589"], ["updated_at", "2021-11-15 04:26:12.981589"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Dodge"], ["model", "Regal"], ["body_type", "Sedan"], ["door_count", 4], ["seat_count", 2], ["available", true], ["created_at", "2021-11-15 04:26:12.987225"], ["updated_at", "2021-11-15 04:26:12.987225"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Dodge"], ["model", "Challenger"], ["body_type", "Cargo Van"], ["door_count", 2], ["seat_count", 3], ["available", true], ["created_at", "2021-11-15 04:26:12.992806"], ["updated_at", "2021-11-15 04:26:12.992806"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "Mustang"], ["body_type", "Coupe"], ["door_count", 1], ["seat_count", 3], ["available", true], ["created_at", "2021-11-15 04:26:12.998375"], ["updated_at", "2021-11-15 04:26:12.998375"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Honda"], ["model", "Camero"], ["body_type", "Wagon"], ["door_count", 1], ["seat_count", 4], ["available", true], ["created_at", "2021-11-15 04:26:13.004077"], ["updated_at", "2021-11-15 04:26:13.004077"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "BMW"], ["model", "F150"], ["body_type", "Convertible"], ["door_count", 3], ["seat_count", 7], ["available", true], ["created_at", "2021-11-15 04:26:13.009766"], ["updated_at", "2021-11-15 04:26:13.009766"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "Prius"], ["body_type", "Cargo Van"], ["door_count", 1], ["seat_count", 7], ["available", true], ["created_at", "2021-11-15 04:26:13.015225"], ["updated_at", "2021-11-15 04:26:13.015225"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Lincoln"], ["model", "Charger"], ["body_type", "Regular Cab Pickup"], ["door_count", 4], ["seat_count", 2], ["available", true], ["created_at", "2021-11-15 04:26:13.020846"], ["updated_at", "2021-11-15 04:26:13.020846"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Lincoln"], ["model", "Pathfiner"], ["body_type", "SUV"], ["door_count", 4], ["seat_count", 3], ["available", true], ["created_at", "2021-11-15 04:26:13.026950"], ["updated_at", "2021-11-15 04:26:13.026950"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Buick"], ["model", "Corolla"], ["body_type", "Hatchback"], ["door_count", 1], ["seat_count", 4], ["available", true], ["created_at", "2021-11-15 04:26:13.032431"], ["updated_at", "2021-11-15 04:26:13.032431"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "X5"], ["body_type", "Cargo Van"], ["door_count", 2], ["seat_count", 2], ["available", true], ["created_at", "2021-11-15 04:26:13.038260"], ["updated_at", "2021-11-15 04:26:13.038260"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Lincoln"], ["model", "LaCrosse"], ["body_type", "Extended Cab Pickup"], ["door_count", 2], ["seat_count", 3], ["available", true], ["created_at", "2021-11-15 04:26:13.044173"], ["updated_at", "2021-11-15 04:26:13.044173"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.5ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "MKZ"], ["body_type", "Crew Cab Pickup"], ["door_count", 4], ["seat_count", 1], ["available", true], ["created_at", "2021-11-15 04:26:13.051079"], ["updated_at", "2021-11-15 04:26:13.051079"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Toyota"], ["model", "CR-V"], ["body_type", "SUV"], ["door_count", 3], ["seat_count", 3], ["available", true], ["created_at", "2021-11-15 04:26:13.057764"], ["updated_at", "2021-11-15 04:26:13.057764"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Dodge"], ["model", "CR-V"], ["body_type", "Hatchback"], ["door_count", 4], ["seat_count", 5], ["available", true], ["created_at", "2021-11-15 04:26:13.063626"], ["updated_at", "2021-11-15 04:26:13.063626"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "MKX"], ["body_type", "Coupe"], ["door_count", 1], ["seat_count", 7], ["available", true], ["created_at", "2021-11-15 04:26:13.069488"], ["updated_at", "2021-11-15 04:26:13.069488"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "Accord"], ["body_type", "Minivan"], ["door_count", 1], ["seat_count", 8], ["available", true], ["created_at", "2021-11-15 04:26:13.075867"], ["updated_at", "2021-11-15 04:26:13.075867"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "Corolla"], ["body_type", "Cargo Van"], ["door_count", 3], ["seat_count", 4], ["available", true], ["created_at", "2021-11-15 04:26:13.081843"], ["updated_at", "2021-11-15 04:26:13.081843"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Honda"], ["model", "A4"], ["body_type", "Cargo Van"], ["door_count", 1], ["seat_count", 8], ["available", true], ["created_at", "2021-11-15 04:26:13.087703"], ["updated_at", "2021-11-15 04:26:13.087703"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Audi"], ["model", "Camero"], ["body_type", "Coupe"], ["door_count", 3], ["seat_count", 4], ["available", true], ["created_at", "2021-11-15 04:26:13.093710"], ["updated_at", "2021-11-15 04:26:13.093710"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "Prius"], ["body_type", "Cargo Van"], ["door_count", 2], ["seat_count", 2], ["available", true], ["created_at", "2021-11-15 04:26:13.099667"], ["updated_at", "2021-11-15 04:26:13.099667"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Honda"], ["model", "Malibu"], ["body_type", "Cargo Van"], ["door_count", 2], ["seat_count", 1], ["available", true], ["created_at", "2021-11-15 04:26:13.105621"], ["updated_at", "2021-11-15 04:26:13.105621"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Honda"], ["model", "Civic"], ["body_type", "Passenger Van"], ["door_count", 3], ["seat_count", 4], ["available", true], ["created_at", "2021-11-15 04:26:13.112253"], ["updated_at", "2021-11-15 04:26:13.112253"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "BMW"], ["model", "X1"], ["body_type", "Extended Cab Pickup"], ["door_count", 2], ["seat_count", 6], ["available", true], ["created_at", "2021-11-15 04:26:13.118093"], ["updated_at", "2021-11-15 04:26:13.118093"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "Accord"], ["body_type", "SUV"], ["door_count", 1], ["seat_count", 5], ["available", true], ["created_at", "2021-11-15 04:26:13.123878"], ["updated_at", "2021-11-15 04:26:13.123878"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Honda"], ["model", "Regal"], ["body_type", "Convertible"], ["door_count", 4], ["seat_count", 1], ["available", true], ["created_at", "2021-11-15 04:26:13.130477"], ["updated_at", "2021-11-15 04:26:13.130477"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Lincoln"], ["model", "A8"], ["body_type", "Regular Cab Pickup"], ["door_count", 2], ["seat_count", 3], ["available", true], ["created_at", "2021-11-15 04:26:13.136473"], ["updated_at", "2021-11-15 04:26:13.136473"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Lincoln"], ["model", "F150"], ["body_type", "Wagon"], ["door_count", 4], ["seat_count", 5], ["available", true], ["created_at", "2021-11-15 04:26:13.142489"], ["updated_at", "2021-11-15 04:26:13.142489"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Buick"], ["model", "F150"], ["body_type", "Regular Cab Pickup"], ["door_count", 1], ["seat_count", 4], ["available", true], ["created_at", "2021-11-15 04:26:13.148492"], ["updated_at", "2021-11-15 04:26:13.148492"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Dodge"], ["model", "MKS"], ["body_type", "Regular Cab Pickup"], ["door_count", 3], ["seat_count", 6], ["available", true], ["created_at", "2021-11-15 04:26:13.154383"], ["updated_at", "2021-11-15 04:26:13.154383"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Honda"], ["model", "Silverado"], ["body_type", "Coupe"], ["door_count", 1], ["seat_count", 2], ["available", true], ["created_at", "2021-11-15 04:26:13.160198"], ["updated_at", "2021-11-15 04:26:13.160198"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Honda"], ["model", "Camry"], ["body_type", "SUV"], ["door_count", 2], ["seat_count", 6], ["available", true], ["created_at", "2021-11-15 04:26:13.166083"], ["updated_at", "2021-11-15 04:26:13.166083"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "A8"], ["body_type", "Convertible"], ["door_count", 1], ["seat_count", 6], ["available", true], ["created_at", "2021-11-15 04:26:13.172061"], ["updated_at", "2021-11-15 04:26:13.172061"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "MKZ"], ["body_type", "Coupe"], ["door_count", 2], ["seat_count", 2], ["available", true], ["created_at", "2021-11-15 04:26:13.178032"], ["updated_at", "2021-11-15 04:26:13.178032"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "BMW"], ["model", "CR-V"], ["body_type", "Cargo Van"], ["door_count", 1], ["seat_count", 4], ["available", true], ["created_at", "2021-11-15 04:26:13.184137"], ["updated_at", "2021-11-15 04:26:13.184137"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.5ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Honda"], ["model", "Juke"], ["body_type", "Minivan"], ["door_count", 2], ["seat_count", 4], ["available", true], ["created_at", "2021-11-15 04:26:13.189777"], ["updated_at", "2021-11-15 04:26:13.189777"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Ford"], ["model", "Camry"], ["body_type", "Hatchback"], ["door_count", 1], ["seat_count", 8], ["available", true], ["created_at", "2021-11-15 04:26:13.197529"], ["updated_at", "2021-11-15 04:26:13.197529"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.5ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Chevy"], ["model", "Verano"], ["body_type", "Extended Cab Pickup"], ["door_count", 4], ["seat_count", 6], ["available", true], ["created_at", "2021-11-15 04:26:13.203310"], ["updated_at", "2021-11-15 04:26:13.203310"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Honda"], ["model", "A8"], ["body_type", "Hatchback"], ["door_count", 2], ["seat_count", 2], ["available", true], ["created_at", "2021-11-15 04:26:13.209513"], ["updated_at", "2021-11-15 04:26:13.209513"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Toyota"], ["model", "Mustang"], ["body_type", "Coupe"], ["door_count", 1], ["seat_count", 3], ["available", true], ["created_at", "2021-11-15 04:26:13.215212"], ["updated_at", "2021-11-15 04:26:13.215212"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Dodge"], ["model", "X5"], ["body_type", "Extended Cab Pickup"], ["door_count", 4], ["seat_count", 8], ["available", true], ["created_at", "2021-11-15 04:26:13.221011"], ["updated_at", "2021-11-15 04:26:13.221011"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Chevy"], ["model", "Cube"], ["body_type", "Minivan"], ["door_count", 2], ["seat_count", 1], ["available", true], ["created_at", "2021-11-15 04:26:13.226818"], ["updated_at", "2021-11-15 04:26:13.226818"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Buick"], ["model", "Rogue"], ["body_type", "Wagon"], ["door_count", 4], ["seat_count", 5], ["available", true], ["created_at", "2021-11-15 04:26:13.232443"], ["updated_at", "2021-11-15 04:26:13.232443"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Lincoln"], ["model", "Challenger"], ["body_type", "Sedan"], ["door_count", 1], ["seat_count", 1], ["available", true], ["created_at", "2021-11-15 04:26:13.238170"], ["updated_at", "2021-11-15 04:26:13.238170"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Dodge"], ["model", "Prius"], ["body_type", "Convertible"], ["door_count", 2], ["seat_count", 8], ["available", true], ["created_at", "2021-11-15 04:26:13.244783"], ["updated_at", "2021-11-15 04:26:13.244783"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "BMW"], ["model", "Odyssey"], ["body_type", "Convertible"], ["door_count", 3], ["seat_count", 1], ["available", true], ["created_at", "2021-11-15 04:26:13.250711"], ["updated_at", "2021-11-15 04:26:13.250711"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Create (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["brand", "Audi"], ["model", "MKS"], ["body_type", "Convertible"], ["door_count", 3], ["seat_count", 1], ["available", true], ["created_at", "2021-11-15 04:26:13.256756"], ["updated_at", "2021-11-15 04:26:13.256756"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8788231985959094340)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVehicles (20211115044155)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8788231985959094340)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8788231985959094340)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVehicles (20211115044155)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "brand" character varying, "model" character varying, "body_type" character varying, "door_count" integer, "seat_count" integer, "rate" integer, "available" boolean, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_9e34682d54"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8788231985959094340)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8788231985959094340)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVehicles (20211115044155)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "brand" character varying, "model" character varying, "body_type" character varying, "door_count" integer, "seat_count" integer, "rate" integer, "available" boolean, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_9e34682d54"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8788231985959094340)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (23.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Wild_Speed_development"[0m
+  [1m[35m (33.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Wild_Speed_test"[0m
+  [1m[35m (74.6ms)[0m  [1m[35mCREATE DATABASE "Wild_Speed_development" ENCODING = 'unicode'[0m
+  [1m[35m (67.4ms)[0m  [1m[35mCREATE DATABASE "Wild_Speed_test" ENCODING = 'unicode'[0m
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8788231985959094340)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20211111095731)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211111095731"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVehicles (20211115044155)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "brand" character varying, "model" character varying, "body_type" character varying, "door_count" integer, "seat_count" integer, "rate" integer, "available" boolean, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_9e34682d54"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE INDEX "index_vehicles_on_user_id" ON "vehicles" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211115044155"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBookings (20211115052647)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "bookings" ("id" bigserial primary key, "num_of_days" integer, "user_id" bigint NOT NULL, "vehicle_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_ef0571f117"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_ec8ddc3246"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE INDEX "index_bookings_on_user_id" ON "bookings" ("user_id")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE INDEX "index_bookings_on_vehicle_id" ON "bookings" ("vehicle_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211115052647"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-15 05:31:48.331487"], ["updated_at", "2021-11-15 05:31:48.331487"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8788231985959094340)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (27.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Wild_Speed_development"[0m
+  [1m[35m (30.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Wild_Speed_test"[0m
+  [1m[35m (85.5ms)[0m  [1m[35mCREATE DATABASE "Wild_Speed_development" ENCODING = 'unicode'[0m
+  [1m[35m (67.2ms)[0m  [1m[35mCREATE DATABASE "Wild_Speed_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "bookings" CASCADE[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "bookings" ("id" bigserial primary key, "num_of_days" integer, "user_id" bigint NOT NULL, "vehicle_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE INDEX "index_bookings_on_user_id" ON "bookings" ("user_id")[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE INDEX "index_bookings_on_vehicle_id" ON "bookings" ("vehicle_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "vehicles" CASCADE[0m
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "brand" character varying, "model" character varying, "body_type" character varying, "door_count" integer, "seat_count" integer, "rate" integer, "available" boolean, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE INDEX "index_vehicles_on_user_id" ON "vehicles" ("user_id")[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "bookings" ADD CONSTRAINT "fk_rails_ef0571f117"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "bookings" ADD CONSTRAINT "fk_rails_ec8ddc3246"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "vehicles" ADD CONSTRAINT "fk_rails_9e34682d54"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211115052647)[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211111095731),
+(20211115044155);
+
+[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-15 05:31:56.304501"], ["updated_at", "2021-11-15 05:31:56.304501"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "0e40adac9d566423494a29872ba0ac043899c10f"], ["created_at", "2021-11-15 05:31:56.315740"], ["updated_at", "2021-11-15 05:31:56.315740"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "bookings" CASCADE[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "bookings" ("id" bigserial primary key, "num_of_days" integer, "user_id" bigint NOT NULL, "vehicle_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE INDEX "index_bookings_on_user_id" ON "bookings" ("user_id")[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE INDEX "index_bookings_on_vehicle_id" ON "bookings" ("vehicle_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "vehicles" CASCADE[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "brand" character varying, "model" character varying, "body_type" character varying, "door_count" integer, "seat_count" integer, "rate" integer, "available" boolean, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE INDEX "index_vehicles_on_user_id" ON "vehicles" ("user_id")[0m
+  [1m[35m (3.6ms)[0m  [1m[35mALTER TABLE "bookings" ADD CONSTRAINT "fk_rails_ef0571f117"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "bookings" ADD CONSTRAINT "fk_rails_ec8ddc3246"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "vehicles" ADD CONSTRAINT "fk_rails_9e34682d54"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211115052647)[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211111095731),
+(20211115044155);
+
+[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-15 05:31:56.436791"], ["updated_at", "2021-11-15 05:31:56.436791"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-11-15 05:31:56.447424"], ["key", "environment"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "0e40adac9d566423494a29872ba0ac043899c10f"], ["created_at", "2021-11-15 05:31:56.456525"], ["updated_at", "2021-11-15 05:31:56.456525"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (33.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Wild_Speed_development"[0m
+  [1m[35m (32.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Wild_Speed_test"[0m
+  [1m[35m (77.3ms)[0m  [1m[35mCREATE DATABASE "Wild_Speed_development" ENCODING = 'unicode'[0m
+  [1m[35m (67.3ms)[0m  [1m[35mCREATE DATABASE "Wild_Speed_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "bookings" CASCADE[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "bookings" ("id" bigserial primary key, "num_of_days" integer, "user_id" bigint NOT NULL, "vehicle_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE INDEX "index_bookings_on_user_id" ON "bookings" ("user_id")[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE INDEX "index_bookings_on_vehicle_id" ON "bookings" ("vehicle_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "vehicles" CASCADE[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "brand" character varying, "model" character varying, "body_type" character varying, "door_count" integer, "seat_count" integer, "rate" integer, "available" boolean, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE INDEX "index_vehicles_on_user_id" ON "vehicles" ("user_id")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "bookings" ADD CONSTRAINT "fk_rails_ef0571f117"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "bookings" ADD CONSTRAINT "fk_rails_ec8ddc3246"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "vehicles" ADD CONSTRAINT "fk_rails_9e34682d54"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211115052647)[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211111095731),
+(20211115044155);
+
+[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-15 05:32:26.734402"], ["updated_at", "2021-11-15 05:32:26.734402"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "0e40adac9d566423494a29872ba0ac043899c10f"], ["created_at", "2021-11-15 05:32:26.744556"], ["updated_at", "2021-11-15 05:32:26.744556"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "bookings" CASCADE[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "bookings" ("id" bigserial primary key, "num_of_days" integer, "user_id" bigint NOT NULL, "vehicle_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE INDEX "index_bookings_on_user_id" ON "bookings" ("user_id")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE INDEX "index_bookings_on_vehicle_id" ON "bookings" ("vehicle_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "vehicles" CASCADE[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "brand" character varying, "model" character varying, "body_type" character varying, "door_count" integer, "seat_count" integer, "rate" integer, "available" boolean, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE INDEX "index_vehicles_on_user_id" ON "vehicles" ("user_id")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "bookings" ADD CONSTRAINT "fk_rails_ef0571f117"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "bookings" ADD CONSTRAINT "fk_rails_ec8ddc3246"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "vehicles" ADD CONSTRAINT "fk_rails_9e34682d54"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211115052647)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211111095731),
+(20211115044155);
+
+[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-15 05:32:26.864306"], ["updated_at", "2021-11-15 05:32:26.864306"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-11-15 05:32:26.874442"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "0e40adac9d566423494a29872ba0ac043899c10f"], ["created_at", "2021-11-15 05:32:26.881051"], ["updated_at", "2021-11-15 05:32:26.881051"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8788231985959094340)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(8788231985959094340)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-11-15 16:33:07 +1100
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 32.3ms | Allocations: 9932)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 29.8ms | Allocations: 4334)
+  Rendered layout layouts/application.html.erb (Duration: 85.5ms | Allocations: 22838)
+Completed 200 OK in 110ms (Views: 73.7ms | ActiveRecord: 16.8ms | Allocations: 26601)
+
+
+Started GET "/" for ::1 at 2021-11-15 16:33:07 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.1ms | Allocations: 711)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:17
+  Rendered shared/_nav.html.erb (Duration: 8.7ms | Allocations: 1482)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 9786)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 1.9ms | Allocations: 10342)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-15 16:33:10 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (4.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:17
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 1316)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 3.5ms | Allocations: 306)
+  Rendered layout layouts/application.html.erb (Duration: 47.4ms | Allocations: 9510)
+Completed 200 OK in 67ms (Views: 50.4ms | ActiveRecord: 4.3ms | Allocations: 12381)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-15 16:33:12 +1100
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 1121)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:33:12 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 679)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 44.4ms | Allocations: 17840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 103.4ms | Allocations: 25983)
+Completed 200 OK in 120ms (Views: 105.6ms | ActiveRecord: 0.0ms | Allocations: 31744)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:33:15 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 8397)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | Allocations: 16151)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms | Allocations: 16947)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-15 16:33:16 +1100
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 249)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:33:16 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 32.0ms | Allocations: 8334)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 54.2ms | Allocations: 16088)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.0ms | Allocations: 16790)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:33:24 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 24.1ms | Allocations: 8331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 47.5ms | Allocations: 16081)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.0ms | Allocations: 16766)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-11-15 16:33:27 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 187)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 28.7ms | Allocations: 7209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 50.6ms | Allocations: 15225)
+Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.0ms | Allocations: 16815)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-11-15 16:34:39 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 106)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 6338)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 14089)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.0ms | Allocations: 14785)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-15 16:34:50 +1100
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 247)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:34:50 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 29.3ms | Allocations: 8337)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 50.9ms | Allocations: 16091)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.0ms | Allocations: 16793)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:34:51 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.8ms | Allocations: 8331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 43.8ms | Allocations: 16084)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.0ms | Allocations: 16767)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-15 16:34:57 +1100
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 247)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:34:58 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 24.5ms | Allocations: 8331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 41.7ms | Allocations: 16083)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.0ms | Allocations: 16774)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-11-15 16:36:51 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 106)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 18.7ms | Allocations: 6318)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 14068)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms | Allocations: 14683)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-15 16:37:47 +1100
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 247)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:37:47 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 29.1ms | Allocations: 9325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 3.7ms | Allocations: 538)
+  Rendered layout layouts/application.html.erb (Duration: 49.6ms | Allocations: 18003)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms | Allocations: 20017)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:37:49 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 22.2ms | Allocations: 8331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 16084)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.0ms | Allocations: 16847)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-11-15 16:37:51 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 132)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 18.0ms | Allocations: 6835)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 14850)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.0ms | Allocations: 16191)
+
+
+Started POST "/users" for ::1 at 2021-11-15 16:38:00 +1100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 507)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 27.3ms | Allocations: 9744)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.9ms | Allocations: 538)
+  Rendered layout layouts/application.html.erb (Duration: 50.7ms | Allocations: 18432)
+Completed 200 OK in 78ms (Views: 54.8ms | ActiveRecord: 0.0ms | Allocations: 25911)
+
+
+Started GET "/users" for ::1 at 2021-11-15 16:38:11 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/sign_up" for ::1 at 2021-11-15 16:38:34 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 507)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 19.6ms | Allocations: 7389)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.2ms | Allocations: 538)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 16181)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.0ms | Allocations: 18208)
+
+
+Started POST "/users" for ::1 at 2021-11-15 16:38:36 +1100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 106)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 25.6ms | Allocations: 8606)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.1ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 16371)
+Completed 200 OK in 53ms (Views: 46.7ms | ActiveRecord: 0.0ms | Allocations: 19467)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-15 16:38:39 +1100
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 247)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:38:40 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 178)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.1ms | Allocations: 8879)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 49.0ms | Allocations: 16899)
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 0.0ms | Allocations: 18326)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:38:40 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.4ms | Allocations: 8385)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 16135)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.0ms | Allocations: 16898)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-11-15 16:39:02 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 106)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 26.1ms | Allocations: 6361)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 52.9ms | Allocations: 14113)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.0ms | Allocations: 14743)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-15 16:39:15 +1100
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 247)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:39:16 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.9ms | Allocations: 8385)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 16137)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms | Allocations: 16828)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-15 16:39:16 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (3.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:17
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.4ms | Allocations: 304)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 9388)
+Completed 200 OK in 35ms (Views: 29.0ms | ActiveRecord: 3.4ms | Allocations: 10756)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-15 16:39:17 +1100
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:39:18 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 29.7ms | Allocations: 8475)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 4.6ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 56.8ms | Allocations: 16229)
+Completed 200 OK in 60ms (Views: 58.1ms | ActiveRecord: 0.0ms | Allocations: 16958)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-15 16:40:47 +1100
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 247)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:40:47 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 38.7ms | Allocations: 9378)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.4ms | Allocations: 538)
+  Rendered layout layouts/application.html.erb (Duration: 66.5ms | Allocations: 18055)
+Completed 200 OK in 72ms (Views: 70.5ms | ActiveRecord: 0.0ms | Allocations: 20059)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:42:45 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 22.7ms | Allocations: 9379)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.7ms | Allocations: 538)
+  Rendered layout layouts/application.html.erb (Duration: 55.3ms | Allocations: 18054)
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.0ms | Allocations: 20140)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:44:14 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 33.4ms | Allocations: 9385)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.7ms | Allocations: 538)
+  Rendered layout layouts/application.html.erb (Duration: 56.8ms | Allocations: 18057)
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.0ms | Allocations: 20133)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-11-15 16:44:17 +1100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@email.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 15ms (ActiveRecord: 1.4ms | Allocations: 4296)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 169)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.8ms | Allocations: 8556)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 44.9ms | Allocations: 16434)
+Completed 200 OK in 331ms (Views: 45.8ms | ActiveRecord: 0.0ms | Allocations: 17868)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:46:22 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 559)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 26.0ms | Allocations: 9412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.2ms | Allocations: 538)
+  Rendered layout layouts/application.html.erb (Duration: 44.2ms | Allocations: 18205)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.0ms | Allocations: 20261)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:49:09 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 570)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 29.0ms | Allocations: 9416)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.3ms | Allocations: 538)
+  Rendered layout layouts/application.html.erb (Duration: 53.2ms | Allocations: 18208)
+Completed 200 OK in 62ms (Views: 58.9ms | ActiveRecord: 0.0ms | Allocations: 20294)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-15 16:49:12 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:17
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1185)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 304)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 9376)
+Completed 200 OK in 35ms (Views: 29.9ms | ActiveRecord: 1.2ms | Allocations: 10793)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-15 16:49:12 +1100
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:49:13 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 37.6ms | Allocations: 8505)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 64.5ms | Allocations: 16259)
+Completed 200 OK in 70ms (Views: 66.4ms | ActiveRecord: 0.0ms | Allocations: 16989)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:49:15 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 35.0ms | Allocations: 8413)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 55.7ms | Allocations: 16163)
+Completed 200 OK in 58ms (Views: 56.6ms | ActiveRecord: 0.0ms | Allocations: 16846)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-11-15 16:49:16 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 18.9ms | Allocations: 6876)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 14892)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.0ms | Allocations: 16237)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-11-15 16:49:24 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 522)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 15.1ms | Allocations: 7395)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.5ms | Allocations: 538)
+  Rendered layout layouts/application.html.erb (Duration: 38.4ms | Allocations: 16068)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms | Allocations: 18060)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:49:28 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 189)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 24.2ms | Allocations: 8903)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 42.8ms | Allocations: 16919)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 0.0ms | Allocations: 18415)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-15 16:49:30 +1100
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:49:30 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.3ms | Allocations: 8413)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 44.1ms | Allocations: 16167)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.0ms | Allocations: 16896)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-15 16:49:32 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:17
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1185)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | Allocations: 304)
+  Rendered layout layouts/application.html.erb (Duration: 40.2ms | Allocations: 9376)
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 1.8ms | Allocations: 10743)
+
+
+Started GET "/" for ::1 at 2021-11-15 16:49:34 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.2ms | Allocations: 932)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.9ms | Allocations: 264)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 8859)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 10099)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-15 16:52:38 +1100
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-15 16:52:38 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 35.1ms | Allocations: 8503)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 53.6ms | Allocations: 16257)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.0ms | Allocations: 16986)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-11-15 16:55:50 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 111)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 30.8ms | Allocations: 6376)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 56.8ms | Allocations: 14126)
+Completed 200 OK in 59ms (Views: 57.8ms | Allocations: 14741)
+
+

@@ -6,18 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'faker'
-Faker::Config.locale = 'en-AU'
+# require 'faker'
+# Faker::Config.locale = 'en-AU'
 
-31.times { BookingDate.create() }
 
-100.times do
-  Vehicle.create(
-    brand: Faker::Vehicle.make,
-    model: Faker::Vehicle.model,
-    body_type: Faker::Vehicle.car_type,
-    door_count: Faker::Vehicle.doors,
-    seat_count: Faker::Number.between(from: 1, to: 8),
-    available: true
-  )
-end
+# 100.times do
+#   Vehicle.create(
+#     brand: Faker::Vehicle.make,
+#     model: Faker::Vehicle.model,
+#     body_type: Faker::Vehicle.car_type,
+#     door_count: Faker::Vehicle.doors,
+#     seat_count: Faker::Number.between(from: 1, to: 8),
+#     available: true
+#   )
+# end

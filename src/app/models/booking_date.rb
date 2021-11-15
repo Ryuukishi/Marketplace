@@ -1,2 +1,0 @@
-class BookingDate < ApplicationRecord
-end

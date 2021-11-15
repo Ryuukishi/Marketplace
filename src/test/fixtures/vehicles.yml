@@ -6,8 +6,6 @@ one:
   body_type: MyString
   door_count: 1
   seat_count: 1
-  transmission: MyString
-  number_plate: MyString
   available: false
   user: one
 
@@ -17,7 +15,5 @@ two:
   body_type: MyString
   door_count: 1
   seat_count: 1
-  transmission: MyString
-  number_plate: MyString
   available: false
   user: two
