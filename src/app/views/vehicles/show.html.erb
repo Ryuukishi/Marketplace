@@ -1,6 +1,6 @@
 <h1> <%= @vehicle.brand %> <%= @vehicle.model %> </h1>
 
-
+<%= image_tag @vehicle.image, class: "w-50" if @vehicle.image.attached? %>
 <table class="table table-hover w-25">
   <tr>
     <th scope="row">Body:</th>
@@ -14,4 +14,18 @@
     <th scope="row">Seats:</th>
     <td><%= @vehicle.seat_count %></td>
   </tr>
+  <tr>
+    <th scope="row">Available?</th>
+    <% if @vehicle.available %>
+      <td scope="row">✅</td>
+    <% else %>
+      <td scope="row">❌</td>
+    <% end %>
+  </tr>
 </table>
+
+<% if user_signed_in? %>
+  <% if @vehicle.user_id == current_user.id %>
+    <a class="btn btn-primary btn-sm" href="<%= update_vehicle_path %>" role="button">Edit</a>
+  <% end %>
+<% end %>
