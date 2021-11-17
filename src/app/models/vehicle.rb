@@ -1,7 +1,8 @@
 class Vehicle < ApplicationRecord
-  belongs_to :user
   has_one_attached :image
-  has_many :users, through: :appointments
+  belongs_to :owner
+  has_many :bookings
+  has_many :users, through: :bookings
   
   validates :brand, presence: true
   validates :model, presence: true
@@ -10,5 +11,4 @@ class Vehicle < ApplicationRecord
   validates :seat_count, numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 12 }
   validates :available, inclusion: [true, false]
   validates :image, presence: true
-  
 end

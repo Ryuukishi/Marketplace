@@ -25,16 +25,38 @@
 </table>
 
 <% if user_signed_in? %>
-  <% if @vehicle.user_id == current_user.id %>
+  <% if @vehicle.owner_id == current_user.owner.id %>
     <a class="btn btn-primary btn-sm" href="<%= edit_vehicle_path %>" role="button">Edit</a>
     <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#ConfirmDelete">Delete</button>
+  <% else %>
+    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ConfirmBooking">Book</button>
   <% end %>
-  <!-- Modal -->
+
+  <!-- Modal for ConfirmDelete-->
   <div class="modal fade" id="ConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="ConfirmDelete" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="ConfirmDelete">Confirm</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <%= link_to 'Delete', delete_vehicle_path(@vehicle.id), method: :delete, class: 'btn btn-danger' %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal for ConfirmBooking-->
+  <div class="modal fade" id="ConfirmBooking" tabindex="-1" role="dialog" aria-labelledby="ConfirmBooking" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ConfirmBooking">Confirm</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">

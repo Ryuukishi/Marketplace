@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'bookings/index'
+  get 'bookings/new'
+  get 'bookings/create'
+  get 'bookings/delete'
   devise_for :users
   root 'home#page'
   get 'vehicles', to: 'vehicles#index'

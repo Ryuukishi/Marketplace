@@ -7,7 +7,7 @@ one:
   door_count: 1
   seat_count: 1
   available: false
-  user: one
+  owner: one
 
 two:
   brand: MyString
@@ -16,4 +16,4 @@ two:
   door_count: 1
   seat_count: 1
   available: false
-  user: two
+  owner: two
