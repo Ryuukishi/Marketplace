@@ -10,43 +10,23 @@
       <th scope="col">Seat Count</th>
       <th scope="col">Available?</th>
       <th scope="col"></th>
-      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
     <% @vehicles.each do |vehicle| %>
       <tr>
-        <td scope="row"><%= vehicle.brand %></td>
-        <td scope="row"><%= vehicle.model %></td>
-        <td scope="row"><%= vehicle.body_type %></td>
-        <td scope="row"><%= vehicle.door_count %></td>
-        <td scope="row"><%= vehicle.seat_count %></td>
+        <td scope="row" class="align-middle p-0"><%= vehicle.brand %></td>
+        <td scope="row" class="align-middle p-0"><%= vehicle.model %></td>
+        <td scope="row" class="align-middle p-0"><%= vehicle.body_type %></td>
+        <td scope="row" class="align-middle p-0"><%= vehicle.door_count %></td>
+        <td scope="row" class="align-middle p-0"><%= vehicle.seat_count %></td>
         <% if vehicle.available %>
-          <td scope="row">✅</td>
+          <td scope="row" class="align-middle p-0">✅</td>
         <% else %>
-          <td scope="row">❌</td>
+          <td scope="row" class="align-middle p-0">❌</td>
         <% end %>
-        <td scope="row"><a class="btn btn-primary btn-sm" href="<%= vehicle_path(vehicle.id) %>" role="button">Show</a></td>
-        <td scope="row"><button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#ConfirmDelete">Delete</button></td>
+        <td scope="row"><a class="btn btn-primary btn-sm align-middle" href="<%= vehicle_path(vehicle.id) %>" role="button">Show</a></td>
       </tr>
-        <!-- Modal -->
-      <div class="modal fade" id="ConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="ConfirmDelete" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="ConfirmDelete">Confirm</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              Are you sure?
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <%= link_to 'Delete', delete_vehicle_path(vehicle.id), method: :delete, class: 'btn btn-danger' %>
-            </div>
-          </div>
-        </div>
-      </div>
     <% end %>
   </tbody>
 </table>

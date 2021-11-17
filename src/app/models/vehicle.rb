@@ -1,7 +1,7 @@
 class Vehicle < ApplicationRecord
   belongs_to :user
   has_one_attached :image
-  # enum available: { "Yes": true, "No": false }
+  has_many :users, through: :appointments
   
   validates :brand, presence: true
   validates :model, presence: true

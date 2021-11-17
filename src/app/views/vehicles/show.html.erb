@@ -17,15 +17,35 @@
   <tr>
     <th scope="row">Available?</th>
     <% if @vehicle.available %>
-      <td scope="row">✅</td>
+      <td>✅</td>
     <% else %>
-      <td scope="row">❌</td>
+      <td>❌</td>
     <% end %>
   </tr>
 </table>
 
 <% if user_signed_in? %>
   <% if @vehicle.user_id == current_user.id %>
-    <a class="btn btn-primary btn-sm" href="<%= update_vehicle_path %>" role="button">Edit</a>
+    <a class="btn btn-primary btn-sm" href="<%= edit_vehicle_path %>" role="button">Edit</a>
+    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#ConfirmDelete">Delete</button>
   <% end %>
+  <!-- Modal -->
+  <div class="modal fade" id="ConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="ConfirmDelete" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ConfirmDelete">Confirm</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <%= link_to 'Delete', delete_vehicle_path(@vehicle.id), method: :delete, class: 'btn btn-danger' %>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <% end %>
