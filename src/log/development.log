@@ -29287,3 +29287,954 @@ Redirected to https://wild-speed.s3.ap-southeast-2.amazonaws.com/kxvpdfgaoeicli7
 Completed 302 Found in 14ms (ActiveRecord: 1.5ms | Allocations: 2533)
 
 
+Started GET "/" for 127.0.0.1 at 2021-11-18 20:54:28 +1100
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1130.0ms | Allocations: 22079)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.4ms | Allocations: 543)
+  Rendered layout layouts/application.html.erb (Duration: 1168.6ms | Allocations: 31186)
+Completed 200 OK in 1191ms (Views: 1173.8ms | ActiveRecord: 0.0ms | Allocations: 35668)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-18 20:54:33 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 707)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 505.3ms | Allocations: 357084)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 261)
+  Rendered layout layouts/application.html.erb (Duration: 518.3ms | Allocations: 365235)
+Completed 200 OK in 549ms (Views: 521.5ms | ActiveRecord: 8.8ms | Allocations: 373603)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-11-18 20:54:36 +1100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@email.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 300ms (ActiveRecord: 4.6ms | Allocations: 6467)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-18 20:54:36 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/page.html.erb:9
+  Rendered home/page.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1971)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 9771)
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 1.4ms | Allocations: 10318)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-18 20:54:39 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 57.6ms | Allocations: 18548)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 59.2ms | Allocations: 18913)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.6ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 78.6ms | Allocations: 26868)
+Completed 200 OK in 118ms (Views: 78.6ms | ActiveRecord: 12.2ms | Allocations: 37370)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2021-11-18 20:54:43 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (2.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:16
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1261)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:21
+  Rendered shared/_nav.html.erb (Duration: 6.2ms | Allocations: 1154)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 10050)
+Completed 200 OK in 30ms (Views: 23.4ms | ActiveRecord: 3.8ms | Allocations: 11003)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2021-11-18 20:54:53 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"Nissan", "model"=>"R-34", "body_type"=>"SUV", "door_count"=>"5", "seat_count"=>"10", "available"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb1d440efd8 @tempfile=#<Tempfile:/tmp/RackMultipart20211118-48493-z4v1r0.jpeg>, @original_filename="book-collection.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"vehicle[image]\"; filename=\"book-collection.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOwner Load (2.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:79:in `check_owners_exist'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mOwner Load (1.8ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mVehicle Create (3.0ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "R-34"], ["body_type", "SUV"], ["door_count", 5], ["seat_count", 10], ["available", true], ["owner_id", 1], ["created_at", "2021-11-18 09:54:54.094217"], ["updated_at", "2021-11-18 09:54:54.094217"]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mActiveStorage::Attachment Load (3.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mActiveStorage::Blob Create (4.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "8gduwfvly6ba5ncyy8qxken71odm"], ["filename", "book-collection.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "amazon"], ["byte_size", 1076687], ["checksum", "Ikm0QgTY7zTkTqltSd6VlA=="], ["created_at", "2021-11-18 09:54:54.108988"]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mActiveStorage::Attachment Create (3.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Vehicle"], ["record_id", 4], ["blob_id", 4], ["created_at", "2021-11-18 09:54:54.116917"]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mVehicle Update (1.8ms)[0m  [1m[33mUPDATE "vehicles" SET "updated_at" = $1 WHERE "vehicles"."id" = $2[0m  [["updated_at", "2021-11-18 09:54:54.123137"], ["id", 4]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+[36m  S3 Storage (628.9ms) [0m[32mUploaded file to key: 8gduwfvly6ba5ncyy8qxken71odm (checksum: Ikm0QgTY7zTkTqltSd6VlA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: ba455f4b-019f-47f0-9954-992acbb1095a) to Async(default) with arguments: #<GlobalID:0x00007fb1d4bfd078 @uri=#<URI::GID gid://wild-speed/ActiveStorage::Blob/4>>
+Redirected to http://127.0.0.1:3000/vehicle/4
+Completed 302 Found in 795ms (ActiveRecord: 40.2ms | Allocations: 69115)
+
+
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ba455f4b-019f-47f0-9954-992acbb1095a] Performing ActiveStorage::AnalyzeJob (Job ID: ba455f4b-019f-47f0-9954-992acbb1095a) from Async(default) enqueued at 2021-11-18T09:54:54Z with arguments: #<GlobalID:0x00007fb19c068e70 @uri=#<URI::GID gid://wild-speed/ActiveStorage::Blob/4>>
+Started GET "/vehicle/4" for 127.0.0.1 at 2021-11-18 20:54:54 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVehicle Load (1.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:27
+  [1m[36mOwner Load (2.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:28
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 21.3ms | Allocations: 5149)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 45.9ms | Allocations: 13308)
+Completed 200 OK in 58ms (Views: 43.4ms | ActiveRecord: 8.0ms | Allocations: 15148)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ba455f4b-019f-47f0-9954-992acbb1095a] [36m  S3 Storage (239.9ms) [0m[34mDownloaded file from key: 8gduwfvly6ba5ncyy8qxken71odm[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ba455f4b-019f-47f0-9954-992acbb1095a] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ba455f4b-019f-47f0-9954-992acbb1095a]   [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ba455f4b-019f-47f0-9954-992acbb1095a]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ba455f4b-019f-47f0-9954-992acbb1095a]   [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ba455f4b-019f-47f0-9954-992acbb1095a] Performed ActiveStorage::AnalyzeJob (Job ID: ba455f4b-019f-47f0-9954-992acbb1095a) from Async(default) in 257.7ms
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--54e924e80abb0850002ef7003f1e6e0b1cd691c9/book-collection.jpeg" for 127.0.0.1 at 2021-11-18 20:54:55 +1100
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--54e924e80abb0850002ef7003f1e6e0b1cd691c9", "filename"=>"book-collection"}
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[36m  S3 Storage (2.0ms) [0m[34mGenerated URL for file at key: 8gduwfvly6ba5ncyy8qxken71odm (https://wild-speed.s3.ap-southeast-2.amazonaws.com/8gduwfvly6ba5ncyy8qxken71odm?response-content-disposition=inline%3B%20filename%3D%22book-collection.jpeg%22%3B%20filename%2A%3DUTF-8%27%27book-collection.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNAGN4EU6WW35W6F%2F20211118%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20211118T095455Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=9a39c05b2f515f3e48e0213a4aeb0552775950510e3a6d054dde921f458cd1b2)[0m
+Redirected to https://wild-speed.s3.ap-southeast-2.amazonaws.com/8gduwfvly6ba5ncyy8qxken71odm?response-content-disposition=inline%3B%20filename%3D%22book-collection.jpeg%22%3B%20filename%2A%3DUTF-8%27%27book-collection.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNAGN4EU6WW35W6F%2F20211118%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20211118T095455Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=9a39c05b2f515f3e48e0213a4aeb0552775950510e3a6d054dde921f458cd1b2
+Completed 302 Found in 9ms (ActiveRecord: 0.8ms | Allocations: 3205)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-18 20:54:58 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 23.3ms | Allocations: 13317)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 23.7ms | Allocations: 13419)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 38.2ms | Allocations: 21240)
+Completed 200 OK in 46ms (Views: 39.1ms | ActiveRecord: 1.3ms | Allocations: 23285)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-18 20:55:03 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 32.2ms | Allocations: 13126)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 32.6ms | Allocations: 13222)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 49.7ms | Allocations: 20911)
+Completed 200 OK in 57ms (Views: 50.6ms | ActiveRecord: 1.3ms | Allocations: 22658)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-18 20:56:32 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 32.4ms | Allocations: 13706)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 33.4ms | Allocations: 14042)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.2ms | Allocations: 490)
+  Rendered layout layouts/application.html.erb (Duration: 48.3ms | Allocations: 22631)
+Completed 200 OK in 59ms (Views: 51.1ms | ActiveRecord: 1.5ms | Allocations: 25388)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2021-11-18 20:56:43 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"Nissan", "model"=>"R-34", "body_type"=>"Large Car", "door_count"=>"4", "seat_count"=>"6", "available"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb1d9b77248 @tempfile=#<Tempfile:/tmp/RackMultipart20211118-48493-4y9vpx.jpeg>, @original_filename="book-collection.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"vehicle[image]\"; filename=\"book-collection.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOwner Load (1.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:79:in `check_owners_exist'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mOwner Load (1.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mVehicle Create (2.2ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "R-34"], ["body_type", "Large Car"], ["door_count", 4], ["seat_count", 6], ["available", true], ["owner_id", 1], ["created_at", "2021-11-18 09:56:43.947782"], ["updated_at", "2021-11-18 09:56:43.947782"]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mActiveStorage::Attachment Load (1.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mActiveStorage::Blob Create (1.9ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "k99nqqep79ok3kujbvyeindmhj18"], ["filename", "book-collection.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "amazon"], ["byte_size", 1076687], ["checksum", "Ikm0QgTY7zTkTqltSd6VlA=="], ["created_at", "2021-11-18 09:56:43.958861"]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mActiveStorage::Attachment Create (2.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Vehicle"], ["record_id", 5], ["blob_id", 5], ["created_at", "2021-11-18 09:56:43.964358"]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mVehicle Update (4.7ms)[0m  [1m[33mUPDATE "vehicles" SET "updated_at" = $1 WHERE "vehicles"."id" = $2[0m  [["updated_at", "2021-11-18 09:56:43.969749"], ["id", 5]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+[36m  S3 Storage (622.8ms) [0m[32mUploaded file to key: k99nqqep79ok3kujbvyeindmhj18 (checksum: Ikm0QgTY7zTkTqltSd6VlA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 09301481-b0e6-4565-b7a9-9d252d92066d) to Async(default) with arguments: #<GlobalID:0x00007fb1d9d87c18 @uri=#<URI::GID gid://wild-speed/ActiveStorage::Blob/5>>
+Redirected to http://127.0.0.1:3000/vehicle/5
+Completed 302 Found in 691ms (ActiveRecord: 24.0ms | Allocations: 15010)
+
+
+  [1m[36mActiveStorage::Blob Load (1.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [09301481-b0e6-4565-b7a9-9d252d92066d] Performing ActiveStorage::AnalyzeJob (Job ID: 09301481-b0e6-4565-b7a9-9d252d92066d) from Async(default) enqueued at 2021-11-18T09:56:44Z with arguments: #<GlobalID:0x00007fb1d9dd4860 @uri=#<URI::GID gid://wild-speed/ActiveStorage::Blob/5>>
+Started GET "/vehicle/5" for 127.0.0.1 at 2021-11-18 20:56:44 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mVehicle Load (1.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (2.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:27
+  [1m[36mOwner Load (1.9ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:28
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 26.9ms | Allocations: 4673)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 52.0ms | Allocations: 12807)
+Completed 200 OK in 59ms (Views: 44.0ms | ActiveRecord: 10.1ms | Allocations: 14418)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [09301481-b0e6-4565-b7a9-9d252d92066d] [36m  S3 Storage (249.4ms) [0m[34mDownloaded file from key: k99nqqep79ok3kujbvyeindmhj18[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [09301481-b0e6-4565-b7a9-9d252d92066d] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [09301481-b0e6-4565-b7a9-9d252d92066d]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [09301481-b0e6-4565-b7a9-9d252d92066d]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [09301481-b0e6-4565-b7a9-9d252d92066d]   [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [09301481-b0e6-4565-b7a9-9d252d92066d] Performed ActiveStorage::AnalyzeJob (Job ID: 09301481-b0e6-4565-b7a9-9d252d92066d) from Async(default) in 279.92ms
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d268d7d2f8ee2a1735754c5327f34b4ecb6c4a07/book-collection.jpeg" for 127.0.0.1 at 2021-11-18 20:56:45 +1100
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d268d7d2f8ee2a1735754c5327f34b4ecb6c4a07", "filename"=>"book-collection"}
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[36m  S3 Storage (1.3ms) [0m[34mGenerated URL for file at key: k99nqqep79ok3kujbvyeindmhj18 (https://wild-speed.s3.ap-southeast-2.amazonaws.com/k99nqqep79ok3kujbvyeindmhj18?response-content-disposition=inline%3B%20filename%3D%22book-collection.jpeg%22%3B%20filename%2A%3DUTF-8%27%27book-collection.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNAGN4EU6WW35W6F%2F20211118%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20211118T095645Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=98ca4169cae927c72aa8dd67e92c8cfb5ea48c7cf482a106281d3f140c81a371)[0m
+Redirected to https://wild-speed.s3.ap-southeast-2.amazonaws.com/k99nqqep79ok3kujbvyeindmhj18?response-content-disposition=inline%3B%20filename%3D%22book-collection.jpeg%22%3B%20filename%2A%3DUTF-8%27%27book-collection.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNAGN4EU6WW35W6F%2F20211118%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20211118T095645Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=98ca4169cae927c72aa8dd67e92c8cfb5ea48c7cf482a106281d3f140c81a371
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms | Allocations: 2599)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2021-11-18 21:00:02 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:16
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1289)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:21
+  Rendered shared/_nav.html.erb (Duration: 4.4ms | Allocations: 1500)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 11033)
+Completed 200 OK in 30ms (Views: 23.8ms | ActiveRecord: 2.8ms | Allocations: 12756)
+
+
+Started GET "/mycars" for 127.0.0.1 at 2021-11-18 21:00:04 +1100
+Processing by VehiclesController#mycars as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOwner Load (1.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:15:in `mycars'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/mycars.html.erb within layouts/application
+  [1m[36mVehicle Load (1.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."owner_id" = $1[0m  [["owner_id", 1]]
+  ↳ app/views/vehicles/mycars.html.erb:18
+  Rendered vehicles/mycars.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1919)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 161)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 9825)
+Completed 200 OK in 41ms (Views: 20.2ms | ActiveRecord: 3.7ms | Allocations: 15889)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-18 21:00:06 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 38.0ms | Allocations: 13661)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 39.1ms | Allocations: 13967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 53.1ms | Allocations: 21656)
+Completed 200 OK in 60ms (Views: 53.7ms | ActiveRecord: 1.2ms | Allocations: 23605)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-18 21:00:39 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 24.7ms | Allocations: 11414)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 26.0ms | Allocations: 11750)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.3ms | Allocations: 490)
+  Rendered layout layouts/application.html.erb (Duration: 43.6ms | Allocations: 20338)
+Completed 200 OK in 56ms (Views: 48.1ms | ActiveRecord: 1.3ms | Allocations: 23062)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2021-11-18 21:02:23 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"", "model"=>"", "body_type"=>"", "door_count"=>"", "seat_count"=>"", "available"=>"0"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOwner Load (1.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:79:in `check_owners_exist'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mOwner Load (1.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 45.4ms | Allocations: 16644)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 46.0ms | Allocations: 16740)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 60.5ms | Allocations: 24419)
+Completed 200 OK in 82ms (Views: 61.3ms | ActiveRecord: 6.7ms | Allocations: 31164)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-23 15:24:37 +1100
+  [1m[35m (29.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 58.1ms | Allocations: 10425)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.0ms | Allocations: 542)
+  Rendered layout layouts/application.html.erb (Duration: 86.9ms | Allocations: 19572)
+Completed 200 OK in 118ms (Views: 97.2ms | ActiveRecord: 0.0ms | Allocations: 24055)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2021-11-23 15:25:20 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (3.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:16
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 25.9ms | Allocations: 6948)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 298)
+  Rendered layout layouts/application.html.erb (Duration: 37.6ms | Allocations: 15098)
+Completed 200 OK in 47ms (Views: 28.5ms | ActiveRecord: 11.4ms | Allocations: 19463)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-23 15:25:22 +1100
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-23 15:25:22 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.3ms | Allocations: 700)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 65.1ms | Allocations: 17975)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 261)
+  Rendered layout layouts/application.html.erb (Duration: 82.8ms | Allocations: 26146)
+Completed 200 OK in 106ms (Views: 86.2ms | ActiveRecord: 5.2ms | Allocations: 34117)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-11-23 15:25:25 +1100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@email.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/vehicles/new
+Completed 302 Found in 302ms (ActiveRecord: 3.5ms | Allocations: 6303)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-23 15:25:25 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 28.0ms | Allocations: 12981)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 29.5ms | Allocations: 13325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 43.0ms | Allocations: 21201)
+Completed 200 OK in 49ms (Views: 43.6ms | ActiveRecord: 0.9ms | Allocations: 23427)
+
+
+Started GET "/mycars" for 127.0.0.1 at 2021-11-23 15:25:29 +1100
+Processing by VehiclesController#mycars as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOwner Load (1.7ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:15:in `mycars'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/mycars.html.erb within layouts/application
+  [1m[36mVehicle Load (2.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."owner_id" = $1[0m  [["owner_id", 1]]
+  ↳ app/views/vehicles/mycars.html.erb:18
+  Rendered vehicles/mycars.html.erb within layouts/application (Duration: 12.5ms | Allocations: 2555)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 161)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 10423)
+Completed 200 OK in 70ms (Views: 26.9ms | ActiveRecord: 11.2ms | Allocations: 20858)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2021-11-23 15:25:32 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (2.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:16
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 842)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:21
+  Rendered shared/_nav.html.erb (Duration: 5.8ms | Allocations: 1113)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 9589)
+Completed 200 OK in 30ms (Views: 23.6ms | ActiveRecord: 4.1ms | Allocations: 10256)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-23 15:25:33 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/page.html.erb:9
+  Rendered home/page.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1680)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 9398)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 1.2ms | Allocations: 9867)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-23 15:25:34 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 28.9ms | Allocations: 10927)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 29.4ms | Allocations: 11023)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 47.0ms | Allocations: 18713)
+Completed 200 OK in 55ms (Views: 48.2ms | ActiveRecord: 1.5ms | Allocations: 20485)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2021-11-23 15:25:35 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:16
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:21
+  Rendered shared/_nav.html.erb (Duration: 4.4ms | Allocations: 1097)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 9573)
+Completed 200 OK in 28ms (Views: 22.7ms | ActiveRecord: 3.2ms | Allocations: 10197)
+
+
+Started GET "/vehicle/3" for 127.0.0.1 at 2021-11-23 15:25:37 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mVehicle Load (1.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (2.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:27
+  [1m[36mOwner Load (1.8ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:28
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 97.0ms | Allocations: 50511)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 111.7ms | Allocations: 58458)
+Completed 200 OK in 119ms (Views: 90.3ms | ActiveRecord: 23.6ms | Allocations: 59915)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--11441383b50a2398599c56394fee83882519a6b6/NISSAN.jpg" for 127.0.0.1 at 2021-11-23 15:25:37 +1100
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--11441383b50a2398599c56394fee83882519a6b6", "filename"=>"NISSAN"}
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[36m  S3 Storage (2.8ms) [0m[34mGenerated URL for file at key: kxvpdfgaoeicli7zwaf69yzqzc47 (https://wild-speed.s3.ap-southeast-2.amazonaws.com/kxvpdfgaoeicli7zwaf69yzqzc47?response-content-disposition=inline%3B%20filename%3D%22NISSAN.jpg%22%3B%20filename%2A%3DUTF-8%27%27NISSAN.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNAGN4EU6WW35W6F%2F20211123%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20211123T042537Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=267cd0c544b9992dda1197f3ba0f505a56a2a8b39a4b831a1dc25c01bcb716e5)[0m
+Redirected to https://wild-speed.s3.ap-southeast-2.amazonaws.com/kxvpdfgaoeicli7zwaf69yzqzc47?response-content-disposition=inline%3B%20filename%3D%22NISSAN.jpg%22%3B%20filename%2A%3DUTF-8%27%27NISSAN.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNAGN4EU6WW35W6F%2F20211123%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20211123T042537Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=267cd0c544b9992dda1197f3ba0f505a56a2a8b39a4b831a1dc25c01bcb716e5
+Completed 302 Found in 11ms (ActiveRecord: 1.3ms | Allocations: 3635)
+
+
+Started GET "/vehicle/4" for 127.0.0.1 at 2021-11-23 15:25:37 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVehicle Load (1.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (1.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:27
+  [1m[36mOwner Load (2.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:28
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 20.9ms | Allocations: 4141)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 41.0ms | Allocations: 12149)
+Completed 200 OK in 48ms (Views: 34.6ms | ActiveRecord: 8.6ms | Allocations: 13504)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--54e924e80abb0850002ef7003f1e6e0b1cd691c9/book-collection.jpeg" for 127.0.0.1 at 2021-11-23 15:25:38 +1100
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--54e924e80abb0850002ef7003f1e6e0b1cd691c9", "filename"=>"book-collection"}
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[36m  S3 Storage (7.4ms) [0m[34mGenerated URL for file at key: 8gduwfvly6ba5ncyy8qxken71odm (https://wild-speed.s3.ap-southeast-2.amazonaws.com/8gduwfvly6ba5ncyy8qxken71odm?response-content-disposition=inline%3B%20filename%3D%22book-collection.jpeg%22%3B%20filename%2A%3DUTF-8%27%27book-collection.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNAGN4EU6WW35W6F%2F20211123%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20211123T042538Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a6676b4fef11ca3670ad8865f1a9af219343cbba0f28195f407c29cb834c46ff)[0m
+Redirected to https://wild-speed.s3.ap-southeast-2.amazonaws.com/8gduwfvly6ba5ncyy8qxken71odm?response-content-disposition=inline%3B%20filename%3D%22book-collection.jpeg%22%3B%20filename%2A%3DUTF-8%27%27book-collection.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNAGN4EU6WW35W6F%2F20211123%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20211123T042538Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a6676b4fef11ca3670ad8865f1a9af219343cbba0f28195f407c29cb834c46ff
+Completed 302 Found in 14ms (ActiveRecord: 1.4ms | Allocations: 2483)
+
+
+Started GET "/vehicle/5" for 127.0.0.1 at 2021-11-23 15:25:38 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mVehicle Load (1.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:27
+  [1m[36mOwner Load (1.9ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:28
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 22.7ms | Allocations: 4138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 44.1ms | Allocations: 12146)
+Completed 200 OK in 50ms (Views: 38.1ms | ActiveRecord: 8.2ms | Allocations: 13499)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d268d7d2f8ee2a1735754c5327f34b4ecb6c4a07/book-collection.jpeg" for 127.0.0.1 at 2021-11-23 15:25:39 +1100
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d268d7d2f8ee2a1735754c5327f34b4ecb6c4a07", "filename"=>"book-collection"}
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[36m  S3 Storage (1.8ms) [0m[34mGenerated URL for file at key: k99nqqep79ok3kujbvyeindmhj18 (https://wild-speed.s3.ap-southeast-2.amazonaws.com/k99nqqep79ok3kujbvyeindmhj18?response-content-disposition=inline%3B%20filename%3D%22book-collection.jpeg%22%3B%20filename%2A%3DUTF-8%27%27book-collection.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNAGN4EU6WW35W6F%2F20211123%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20211123T042539Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=394411a71a8152c1f9472adb68f2af3f70b766bf07ca6b23b73f333cbbe7997c)[0m
+Redirected to https://wild-speed.s3.ap-southeast-2.amazonaws.com/k99nqqep79ok3kujbvyeindmhj18?response-content-disposition=inline%3B%20filename%3D%22book-collection.jpeg%22%3B%20filename%2A%3DUTF-8%27%27book-collection.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNAGN4EU6WW35W6F%2F20211123%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20211123T042539Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=394411a71a8152c1f9472adb68f2af3f70b766bf07ca6b23b73f333cbbe7997c
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms | Allocations: 2480)
+
+
+Started GET "/vehicle/4" for 127.0.0.1 at 2021-11-23 15:26:27 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVehicle Load (1.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:27
+  [1m[36mOwner Load (1.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:28
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 22.6ms | Allocations: 4138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | Allocations: 12146)
+Completed 200 OK in 52ms (Views: 40.3ms | ActiveRecord: 7.3ms | Allocations: 13502)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  [1m[35m (128.2ms)[0m  [1m[35mCREATE DATABASE "Wild_Speed_development" ENCODING = 'unicode'[0m
+  [1m[35m (64.9ms)[0m  [1m[35mCREATE DATABASE "Wild_Speed_test" ENCODING = 'unicode'[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8788231985959094340)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20211111095731)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211111095731"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNametoUser (20211115062556)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ADD "first_name" character varying[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "middle_name" character varying[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "last_name" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211115062556"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20211116003842)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211116003842"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBookings (20211117095003)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "bookings" ("id" bigserial primary key, "user_id" bigint NOT NULL, "vehicle_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_ef0571f117"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_ec8ddc3246"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+)[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8788231985959094340)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8788231985959094340)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOwners (20211117102117)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "owners" ("id" bigserial primary key, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_0c54998f4d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE INDEX "index_owners_on_user_id" ON "owners" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211117102117"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVehicles (20211117105036)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "brand" character varying, "model" character varying, "body_type" character varying, "door_count" integer, "seat_count" integer, "available" boolean, "owner_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_ecc199169c"
+FOREIGN KEY ("owner_id")
+  REFERENCES "owners" ("id")
+)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE INDEX "index_vehicles_on_owner_id" ON "vehicles" ("owner_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211117105036"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBookings (20211123095003)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "bookings" ("id" bigserial primary key, "user_id" bigint NOT NULL, "vehicle_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_ef0571f117"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_ec8ddc3246"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+)[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE INDEX "index_bookings_on_user_id" ON "bookings" ("user_id")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE INDEX "index_bookings_on_vehicle_id" ON "bookings" ("vehicle_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211123095003"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-23 04:41:40.400929"], ["updated_at", "2021-11-23 04:41:40.400929"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8788231985959094340)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2021-11-23 15:42:34 +1100
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1092)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.1ms | Allocations: 517)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 9745)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 11964)
+
+
+Started GET "/" for ::1 at 2021-11-23 15:42:34 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.7ms | Allocations: 677)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 17409)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.0ms | Allocations: 17908)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-23 15:42:37 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 587)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 9564)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 261)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 17610)
+Completed 200 OK in 51ms (Views: 37.9ms | ActiveRecord: 0.0ms | Allocations: 24464)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-11-23 15:42:39 +1100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@email.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 11ms (ActiveRecord: 3.7ms | Allocations: 2345)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.9ms | Allocations: 8500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 16247)
+Completed 200 OK in 292ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 16993)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-11-23 15:42:41 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 179)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 24.4ms | Allocations: 11485)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 261)
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | Allocations: 19531)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.0ms | Allocations: 21161)
+
+
+Started POST "/users" for ::1 at 2021-11-23 15:42:52 +1100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Richard", "middle_name"=>"", "last_name"=>"Cho", "email"=>"test@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "middle_name", "last_name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "test@email.com"], ["encrypted_password", "$2a$12$2RxQnOXUvl5lCdc.VpixtumTk0MuoDIX2y16Roa59H5j3tjAtiLDW"], ["created_at", "2021-11-23 04:42:53.048940"], ["updated_at", "2021-11-23 04:42:53.048940"], ["first_name", "Richard"], ["middle_name", ""], ["last_name", "Cho"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 272ms (ActiveRecord: 5.4ms | Allocations: 8272)
+
+
+Started GET "/" for ::1 at 2021-11-23 15:42:53 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/page.html.erb:9
+  Rendered home/page.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1726)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 9445)
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 2.3ms | Allocations: 9913)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-23 15:42:57 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:16
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1205)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:21
+  Rendered shared/_nav.html.erb (Duration: 3.8ms | Allocations: 1239)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 10336)
+Completed 200 OK in 29ms (Views: 20.0ms | ActiveRecord: 2.5ms | Allocations: 14271)
+
+
+Started GET "/vehicles/new" for ::1 at 2021-11-23 15:42:59 +1100
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered shared/_form.html.erb (Duration: 23.5ms | Allocations: 11695)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 24.7ms | Allocations: 12004)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 19693)
+Completed 200 OK in 51ms (Views: 38.2ms | ActiveRecord: 1.0ms | Allocations: 25657)
+
+
+Started POST "/vehicles" for ::1 at 2021-11-23 15:43:12 +1100
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"Nissan", "model"=>"R-34", "body_type"=>"Medium Car", "door_count"=>"4", "seat_count"=>"5", "available"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb340213388 @tempfile=#<Tempfile:/tmp/RackMultipart20211123-9764-awrdwo.jpg>, @original_filename="NISSAN.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"vehicle[image]\"; filename=\"NISSAN.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOwner Load (0.9ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:79:in `check_owners_exist'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:80:in `check_owners_exist'
+  [1m[36mOwner Create (1.8ms)[0m  [1m[32mINSERT INTO "owners" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2021-11-23 04:43:12.817612"], ["updated_at", "2021-11-23 04:43:12.817612"]]
+  ↳ app/controllers/vehicles_controller.rb:80:in `check_owners_exist'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:80:in `check_owners_exist'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mOwner Load (0.9ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mVehicle Create (1.5ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "body_type", "door_count", "seat_count", "available", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["brand", "Nissan"], ["model", "R-34"], ["body_type", "Medium Car"], ["door_count", 4], ["seat_count", 5], ["available", true], ["owner_id", 1], ["created_at", "2021-11-23 04:43:12.858043"], ["updated_at", "2021-11-23 04:43:12.858043"]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mActiveStorage::Blob Create (1.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "4y85scd657qg9rhiwa0zd93xrmtn"], ["filename", "NISSAN.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "amazon"], ["byte_size", 72604], ["checksum", "PWjPVM7Yd9ZhPh4Raqx1kw=="], ["created_at", "2021-11-23 04:43:12.866822"]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mActiveStorage::Attachment Create (2.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Vehicle"], ["record_id", 1], ["blob_id", 1], ["created_at", "2021-11-23 04:43:12.871383"]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mVehicle Update (1.4ms)[0m  [1m[33mUPDATE "vehicles" SET "updated_at" = $1 WHERE "vehicles"."id" = $2[0m  [["updated_at", "2021-11-23 04:43:12.876756"], ["id", 1]]
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:34:in `block in create'
+[36m  S3 Storage (154.1ms) [0m[32mUploaded file to key: 4y85scd657qg9rhiwa0zd93xrmtn (checksum: PWjPVM7Yd9ZhPh4Raqx1kw==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 5606eccf-d1d9-4a64-8c57-85af8c5b7b96) to Async(default) with arguments: #<GlobalID:0x00007fb354390490 @uri=#<URI::GID gid://wild-speed/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/vehicle/1
+Completed 302 Found in 245ms (ActiveRecord: 18.6ms | Allocations: 39401)
+
+
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5606eccf-d1d9-4a64-8c57-85af8c5b7b96] Performing ActiveStorage::AnalyzeJob (Job ID: 5606eccf-d1d9-4a64-8c57-85af8c5b7b96) from Async(default) enqueued at 2021-11-23T04:43:13Z with arguments: #<GlobalID:0x00007fb35441fde8 @uri=#<URI::GID gid://wild-speed/ActiveStorage::Blob/1>>
+Started GET "/vehicle/1" for ::1 at 2021-11-23 15:43:13 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.9ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:27
+  [1m[36mOwner Load (4.0ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:28
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5606eccf-d1d9-4a64-8c57-85af8c5b7b96] [36m  S3 Storage (89.4ms) [0m[34mDownloaded file from key: 4y85scd657qg9rhiwa0zd93xrmtn[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5606eccf-d1d9-4a64-8c57-85af8c5b7b96] Skipping image analysis because the mini_magick gem isn't installed
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 34.4ms | Allocations: 6807)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5606eccf-d1d9-4a64-8c57-85af8c5b7b96]   [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5606eccf-d1d9-4a64-8c57-85af8c5b7b96]   [1m[36mActiveStorage::Blob Update (5.8ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5606eccf-d1d9-4a64-8c57-85af8c5b7b96]   [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5606eccf-d1d9-4a64-8c57-85af8c5b7b96] Performed ActiveStorage::AnalyzeJob (Job ID: 5606eccf-d1d9-4a64-8c57-85af8c5b7b96) from Async(default) in 113.53ms
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 58.5ms | Allocations: 17109)
+Completed 200 OK in 66ms (Views: 50.9ms | ActiveRecord: 9.4ms | Allocations: 18854)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2980834e24dc17bfe65af41c4d915bc2f2678246/NISSAN.jpg" for ::1 at 2021-11-23 15:43:13 +1100
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2980834e24dc17bfe65af41c4d915bc2f2678246", "filename"=>"NISSAN"}
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  S3 Storage (2.4ms) [0m[34mGenerated URL for file at key: 4y85scd657qg9rhiwa0zd93xrmtn (https://wild-speed.s3.ap-southeast-2.amazonaws.com/4y85scd657qg9rhiwa0zd93xrmtn?response-content-disposition=inline%3B%20filename%3D%22NISSAN.jpg%22%3B%20filename%2A%3DUTF-8%27%27NISSAN.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNAGN4EU6WW35W6F%2F20211123%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20211123T044313Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=9030475b1dbec522a2bddcea584032be62f557bfaa4f1a1212e9ebb581bdd35f)[0m
+Redirected to https://wild-speed.s3.ap-southeast-2.amazonaws.com/4y85scd657qg9rhiwa0zd93xrmtn?response-content-disposition=inline%3B%20filename%3D%22NISSAN.jpg%22%3B%20filename%2A%3DUTF-8%27%27NISSAN.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNAGN4EU6WW35W6F%2F20211123%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20211123T044313Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=9030475b1dbec522a2bddcea584032be62f557bfaa4f1a1212e9ebb581bdd35f
+Completed 302 Found in 15ms (ActiveRecord: 1.4ms | Allocations: 3061)
+
+
+Started GET "/" for ::1 at 2021-11-23 15:43:15 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/page.html.erb:9
+  Rendered home/page.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1929)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 9825)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 1.5ms | Allocations: 10369)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-23 15:43:17 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:16
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:21
+  Rendered shared/_nav.html.erb (Duration: 3.4ms | Allocations: 1096)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 9510)
+Completed 200 OK in 23ms (Views: 18.4ms | ActiveRecord: 2.6ms | Allocations: 10127)
+
+
+Started GET "/mycars" for ::1 at 2021-11-23 15:43:18 +1100
+Processing by VehiclesController#mycars as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOwner Load (1.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:15:in `mycars'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/mycars.html.erb within layouts/application
+  [1m[36mVehicle Load (1.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."owner_id" = $1[0m  [["owner_id", 1]]
+  ↳ app/views/vehicles/mycars.html.erb:18
+  Rendered vehicles/mycars.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1490)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 9338)
+Completed 200 OK in 31ms (Views: 20.3ms | ActiveRecord: 3.0ms | Allocations: 12454)
+
+
+Started GET "/vehicle/1" for ::1 at 2021-11-23 15:43:20 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (1.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:27
+  [1m[36mOwner Load (1.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:28
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 17.0ms | Allocations: 4012)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 11878)
+Completed 200 OK in 43ms (Views: 30.7ms | ActiveRecord: 6.9ms | Allocations: 13060)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-23 15:43:22 +1100
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/index.html.erb:16
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 764)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:21
+  Rendered shared/_nav.html.erb (Duration: 3.9ms | Allocations: 1096)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 9494)
+Completed 200 OK in 31ms (Views: 26.7ms | ActiveRecord: 2.6ms | Allocations: 10108)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" INNER JOIN "bookings" ON "vehicles"."id" = "bookings"."vehicle_id" WHERE "bookings"."user_id" = $1[0m  [["user_id", 1]]
