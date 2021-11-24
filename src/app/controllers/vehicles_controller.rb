@@ -25,6 +25,7 @@ class VehiclesController < ApplicationController
 
   # Creates a new Vehicle listing by passing in the params
   def create
+      # First do a check if user-owner relationship exists, if not then create one. 
       check_owners_exist
       
       owner_id = current_user.owner.id

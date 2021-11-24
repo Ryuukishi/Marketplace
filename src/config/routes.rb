@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'bookings/index'
-  get 'bookings/new'
-  get 'bookings/create'
-  get 'bookings/delete'
   devise_for :users
   root 'home#page'
   get 'vehicles', to: 'vehicles#index'
@@ -13,4 +9,9 @@ Rails.application.routes.draw do
   get 'vehicle/:id/edit', to: 'vehicles#edit', as: 'edit_vehicle'
   patch 'vehicle/:id/', to: 'vehicles#update', as: 'update_vehicle'
   delete 'vehicle/:id', to: 'vehicles#destroy', as: 'delete_vehicle'
+  get 'bookings/index', to: 'bookings#index', as: 'bookings'
+  # get 'vehicle/:id', to: 'bookings#new', as: 'new_booking'
+  post 'vehicle/:id', to: 'bookings#create', as: 'new_booking'
+  get 'booking/:id', to: 'bookings#show', as: 'booking'
+  delete 'booking/:id', to: 'bookings#destroy', as: 'delete_booking'
 end

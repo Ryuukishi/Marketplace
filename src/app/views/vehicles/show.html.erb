@@ -24,13 +24,14 @@
   </tr>
 </table>
 
-<% if user_signed_in? %>
-  <% if @vehicle.owner_id == current_user.owner.id %>
-    <a class="btn btn-primary btn-sm" href="<%= edit_vehicle_path %>" role="button">Edit</a>
-    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#ConfirmDelete">Delete</button>
-  <% else %>
-    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ConfirmBooking">Book</button>
+<% if user_signed_in? && current_user.owner %>
+  <% if (@vehicle.owner_id == current_user.owner.id) %>
+    <a class="btn btn-primary mb-3" href="<%= edit_vehicle_path %>" role="button">Edit</a>
+    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#ConfirmDelete">Delete</button>
   <% end %>
+<% else %>
+  <button type="button" class="btn btn-primary btn mb-3" data-bs-toggle="modal" data-bs-target="#ConfirmBooking">Book this car</button>
+<% end %>
 
   <!-- Modal for ConfirmDelete-->
   <div class="modal fade" id="ConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="ConfirmDelete" aria-hidden="true">
@@ -60,14 +61,12 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Are you sure?
+          Book this car?
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <%= link_to 'Delete', delete_vehicle_path(@vehicle.id), method: :delete, class: 'btn btn-danger' %>
+          <%= link_to 'Book', new_booking_path(@vehicle.id), method: :post, class: 'btn btn-success' %>
         </div>
       </div>
     </div>
   </div>
-
-<% end %>
