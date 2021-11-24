@@ -1,10 +1,10 @@
 class BookingsController < ApplicationController
   # Shows all bookings made by the current user
-  def index
+  def bookings_index
     @bookings = current_user.bookings
   end
 
-  def show
+  def booking_show
     @booking = Booking.find(params[:id])
   end
 

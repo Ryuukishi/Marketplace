@@ -1,7 +1,7 @@
 class VehiclesController < ApplicationController
 
   # Shows all Vehicle instances sorted by name
-  def index
+  def vehicles_index
     @vehicles = Vehicle.all.order("brand ASC")
   end
   

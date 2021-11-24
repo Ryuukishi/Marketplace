@@ -1,7 +1,11 @@
 <% if @booking.user.id == current_user.id %>
   <h1>Manage booking</h1>
   <h2> <%= @booking.vehicle.brand %> <%= @booking.vehicle.model %> </h2>
-  <%= image_tag @booking.vehicle.image, class: "w-50" if @booking.vehicle.image.attached? %>
+  <% if @booking.vehicle.image.attached? %>
+    <%= image_tag @booking.vehicle.image, class: "w-50" %>
+  <% else %>
+    <i class="fas fa-car fa-10x"></i>
+  <% end %>
   <p><h2>Booking details:</h2></p>
   <table class="table table-hover w-50">
     <tr>

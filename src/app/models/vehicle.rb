@@ -10,5 +10,4 @@ class Vehicle < ApplicationRecord
   validates :door_count, numericality: { only_integer: true, greater_than_or_equal_to: 2, less_than_or_equal_to: 5 }
   validates :seat_count, numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 12 }
   validates :available, inclusion: [true, false]
-  validates :image, presence: true
 end
