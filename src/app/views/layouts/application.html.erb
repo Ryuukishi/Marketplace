@@ -16,12 +16,17 @@
     <script src="https://kit.fontawesome.com/2957ab1fbb.js" crossorigin="anonymous" integrity="sha384-kjYfDgOceBz62z0ZvYZH3tlxReAmd5x2Ar2hv8JW55fnSRQ29RUhp/rwkEtdkTc3" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body">
     <div><%= image_tag "logo.png", style: "display:block; margin: auto" %></div>
     <div class="container">
     <%= render "shared/nav" %>
     <p class="alert"><%= alert %></p>
     <%= yield %>
     </div>
+    <footer class="text-center">
+      <p>Richard Cho © 2021</p>
+    </footer>
   </body>
 </html>
+
+

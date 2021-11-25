@@ -1,18 +1,15 @@
-<div class="row">
+<%# <div class="row">
   <div class="jumbotron">
-    <div class="col-md-6">
-      <h1 class="display-4">Dominic Toretto</h1>
-      <p class="lead" style="font-style: italic">"I live my life a quarter mile at a time."</p>
+    <div class="col-md-">
+      <h1 class="display-4" style="font-style: italic">Where will life take you next?</h1>
       <hr class="my-4">
-      <p>Dominic "Dom" Toretto is a fictional character and the main protagonist of the Fast & Furious franchise.</p>
-      <p class="lead">
-      <% if ! user_signed_in? %>
-        <%= link_to "Login", new_user_session_path, class:"btn btn-primary btn-lg" %>
-      <% end %>
-      </p>
     </div>
     <div class="col-md-6">
-      <%= image_tag "family.jpg", class: "home-image"%>
-    </div>
+      
+    <%# </div>
   </div>
+</div>  %>
+<div>
+<h1 class="fst-italic text-center">Where will life take you next?</h1>
+<%= image_tag "home.jpeg", class: "w-100 rounded mx-auto mt-2 mb-5" %>
 </div>

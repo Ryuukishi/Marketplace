@@ -9,7 +9,7 @@
 require 'faker'
 
 50.times do 
-  User.create(
+  User.create!(
     email: Faker::Internet.safe_email,
     password: Faker::Internet.password,
     first_name: Faker::Name.first_name,
@@ -18,13 +18,13 @@ require 'faker'
 end 
 
 10.times do 
-  Owner.create(
+  Owner.create!(
     user_id: Faker::Number.between(from: 1, to: 50)
   )
 end 
 
 50.times do
-  Vehicle.create(
+  Vehicle.create!(
     brand: Faker::Vehicle.make,
     model: Faker::Vehicle.model,
     body_type: Faker::Vehicle.car_type,
@@ -36,7 +36,7 @@ end
 end
 
 20.times do
-  Booking.create(
+  Booking.create!(
     user_id: Faker::Number.between(from: 1, to: 50),
     vehicle_id: Faker::Number.between(from: 1, to: 50)
   )

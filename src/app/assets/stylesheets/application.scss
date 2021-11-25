@@ -36,9 +36,6 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // simple_form helpers
 @import "simple_form-bootstrap/simple_form-bootstrap";
 
- .home-image {
-  width: 100%;
-}
 
 #navbarNav {
   justify-content: center;

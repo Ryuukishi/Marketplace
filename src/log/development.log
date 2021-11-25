@@ -46368,3 +46368,2206 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.0ms | Allocations: 20290)
 
 
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:11:30 +1100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 59.0ms | Allocations: 10425)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.7ms | Allocations: 576)
+  Rendered layout layouts/application.html.erb (Duration: 93.2ms | Allocations: 19610)
+Completed 200 OK in 110ms (Views: 98.1ms | ActiveRecord: 0.0ms | Allocations: 24093)
+
+
+Started GET "/bookings/index" for 127.0.0.1 at 2021-11-25 13:11:43 +1100
+Processing by BookingsController#bookings_index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 373)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:11:44 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 702)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 48.2ms | Allocations: 17986)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 61.0ms | Allocations: 26184)
+Completed 200 OK in 86ms (Views: 63.1ms | ActiveRecord: 9.6ms | Allocations: 34546)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2021-11-25 13:11:47 +1100
+Processing by VehiclesController#vehicles_index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/vehicles_index.html.erb within layouts/application
+  [1m[36mVehicle Load (2.9ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/vehicles_index.html.erb:16
+  Rendered vehicles/vehicles_index.html.erb within layouts/application (Duration: 28.0ms | Allocations: 6870)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.1ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 50.9ms | Allocations: 15086)
+Completed 200 OK in 63ms (Views: 43.4ms | ActiveRecord: 10.0ms | Allocations: 19376)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2021-11-25 13:11:48 +1100
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:11:48 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.8ms | Allocations: 8543)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 38.7ms | Allocations: 16347)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.0ms | Allocations: 17089)
+
+
+Started GET "/mycars" for 127.0.0.1 at 2021-11-25 13:11:50 +1100
+Processing by VehiclesController#mycars as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 250)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:11:50 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.4ms | Allocations: 8452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 39.0ms | Allocations: 16255)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.0ms | Allocations: 16960)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2021-11-25 13:11:58 +1100
+Processing by VehiclesController#vehicles_index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/vehicles_index.html.erb within layouts/application
+  [1m[36mVehicle Load (2.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/vehicles_index.html.erb:16
+  Rendered vehicles/vehicles_index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 267)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 9129)
+Completed 200 OK in 40ms (Views: 33.8ms | ActiveRecord: 2.3ms | Allocations: 9774)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:12:02 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 4.0ms | Allocations: 680)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 221)
+  Rendered layout layouts/application.html.erb (Duration: 36.3ms | Allocations: 8438)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms | Allocations: 8899)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:16:11 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 44.6ms | Allocations: 17530)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.1ms | Allocations: 546)
+  Rendered layout layouts/application.html.erb (Duration: 69.4ms | Allocations: 25989)
+Completed 200 OK in 73ms (Views: 71.7ms | ActiveRecord: 0.0ms | Allocations: 27445)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:17:29 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1060)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 546)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 9636)
+Completed 200 OK in 20ms (Views: 18.9ms | Allocations: 11107)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:17:45 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1059)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.1ms | Allocations: 546)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 9637)
+Completed 200 OK in 20ms (Views: 18.9ms | Allocations: 11117)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:17:49 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1059)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.5ms | Allocations: 546)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 9635)
+Completed 200 OK in 26ms (Views: 24.3ms | Allocations: 11108)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:18:03 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.2ms | Allocations: 546)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 9638)
+Completed 200 OK in 23ms (Views: 21.1ms | Allocations: 11109)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:18:09 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1061)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | Allocations: 546)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 9637)
+Completed 200 OK in 20ms (Views: 18.1ms | Allocations: 11108)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:18:46 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1061)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.1ms | Allocations: 546)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 9637)
+Completed 200 OK in 22ms (Views: 20.2ms | Allocations: 11108)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:18:58 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1061)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.3ms | Allocations: 546)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 9637)
+Completed 200 OK in 25ms (Views: 23.0ms | Allocations: 11108)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:19:59 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.8ms | Allocations: 841)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.8ms | Allocations: 662)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 9537)
+Completed 200 OK in 22ms (Views: 20.5ms | Allocations: 11008)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:21:35 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.6ms | Allocations: 841)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.4ms | Allocations: 668)
+  Rendered layout layouts/application.html.erb (Duration: 11444.7ms | Allocations: 72429)
+Completed 200 OK in 11449ms (Views: 11447.5ms | Allocations: 73900)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:23:29 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 0.6ms | Allocations: 179)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.4ms | Allocations: 660)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 9099)
+Completed 200 OK in 20ms (Views: 18.2ms | Allocations: 10576)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:24:16 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 0.6ms | Allocations: 179)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.3ms | Allocations: 660)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 9099)
+Completed 200 OK in 32ms (Views: 30.9ms | Allocations: 10570)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:24:51 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 0.5ms | Allocations: 179)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.2ms | Allocations: 660)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 9099)
+Completed 200 OK in 20ms (Views: 19.1ms | Allocations: 10570)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:24:55 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 0.5ms | Allocations: 178)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.4ms | Allocations: 660)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 9098)
+Completed 200 OK in 20ms (Views: 18.8ms | Allocations: 10569)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:26:41 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.0ms | Allocations: 859)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.4ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 9554)
+Completed 200 OK in 34ms (Views: 32.9ms | Allocations: 11025)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:26:58 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.7ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.6ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 9550)
+Completed 200 OK in 20ms (Views: 18.7ms | Allocations: 11021)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:27:11 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.5ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 9550)
+Completed 200 OK in 21ms (Views: 19.5ms | Allocations: 11021)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:27:21 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.5ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.1ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 9550)
+Completed 200 OK in 28ms (Views: 25.3ms | Allocations: 11021)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:27:27 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.7ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.1ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 9550)
+Completed 200 OK in 19ms (Views: 17.9ms | Allocations: 11021)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:27:37 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.1ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.3ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 9550)
+Completed 200 OK in 24ms (Views: 22.8ms | Allocations: 11021)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:27:48 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.6ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.5ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 9550)
+Completed 200 OK in 23ms (Views: 21.7ms | Allocations: 11021)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:32:13 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.9ms | Allocations: 860)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.8ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 9555)
+Completed 200 OK in 21ms (Views: 19.7ms | Allocations: 11026)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:32:27 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 4.5ms | Allocations: 860)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.1ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 9555)
+Completed 200 OK in 26ms (Views: 24.6ms | Allocations: 11026)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:32:44 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.1ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 6.6ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 9555)
+Completed 200 OK in 41ms (Views: 39.3ms | Allocations: 11026)
+
+
+Started GET "/bookings/index" for 127.0.0.1 at 2021-11-25 13:32:47 +1100
+Processing by BookingsController#bookings_index as HTML
+Completed 401 Unauthorized in 4ms (Allocations: 281)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:32:47 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.6ms | Allocations: 574)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 47.3ms | Allocations: 9484)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 67.2ms | Allocations: 17567)
+Completed 200 OK in 77ms (Views: 75.1ms | Allocations: 19385)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:34:06 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 58.8ms | Allocations: 8452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.2ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 102.2ms | Allocations: 16260)
+Completed 200 OK in 109ms (Views: 103.0ms | Allocations: 17034)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:34:48 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.4ms | Allocations: 573)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 29.2ms | Allocations: 9478)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.2ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 55.7ms | Allocations: 18233)
+Completed 200 OK in 61ms (Views: 60.0ms | Allocations: 20246)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:34:49 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.3ms | Allocations: 8452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 47.5ms | Allocations: 16265)
+Completed 200 OK in 51ms (Views: 49.1ms | Allocations: 17033)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:34:52 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.4ms | Allocations: 8452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 41.5ms | Allocations: 16262)
+Completed 200 OK in 46ms (Views: 44.2ms | Allocations: 16952)
+
+
+Started GET "/bookings/index" for 127.0.0.1 at 2021-11-25 13:34:53 +1100
+Processing by BookingsController#bookings_index as HTML
+Completed 401 Unauthorized in 1ms (Allocations: 249)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:34:54 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.7ms | Allocations: 8452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 16264)
+Completed 200 OK in 41ms (Views: 38.7ms | Allocations: 16963)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:34:54 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 5.0ms | Allocations: 856)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 356)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 8890)
+Completed 200 OK in 27ms (Views: 25.6ms | Allocations: 10068)
+
+
+Started GET "/bookings/index" for 127.0.0.1 at 2021-11-25 13:34:57 +1100
+Processing by BookingsController#bookings_index as HTML
+Completed 401 Unauthorized in 1ms (Allocations: 281)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:34:57 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.7ms | Allocations: 8542)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 16354)
+Completed 200 OK in 40ms (Views: 39.2ms | Allocations: 17090)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:35:00 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 31.7ms | Allocations: 8452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 52.1ms | Allocations: 16260)
+Completed 200 OK in 60ms (Views: 58.9ms | Allocations: 16951)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-11-25 13:35:01 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 192)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 49.9ms | Allocations: 11759)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 72.0ms | Allocations: 19838)
+Completed 200 OK in 78ms (Views: 75.7ms | Allocations: 21465)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-11-25 13:44:46 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 521)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 30.6ms | Allocations: 11270)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.5ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 59.1ms | Allocations: 20018)
+Completed 200 OK in 68ms (Views: 66.3ms | Allocations: 22040)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-11-25 13:44:54 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 521)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 37.4ms | Allocations: 11270)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.6ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 59.3ms | Allocations: 20017)
+Completed 200 OK in 68ms (Views: 66.7ms | Allocations: 22037)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:44:57 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.7ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 356)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 8889)
+Completed 200 OK in 26ms (Views: 21.9ms | Allocations: 10109)
+
+
+Started GET "/bookings/index" for 127.0.0.1 at 2021-11-25 13:44:58 +1100
+Processing by BookingsController#bookings_index as HTML
+Completed 401 Unauthorized in 1ms (Allocations: 281)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:44:59 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 189)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.1ms | Allocations: 8953)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.4ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 40.8ms | Allocations: 17036)
+Completed 200 OK in 45ms (Views: 43.3ms | Allocations: 18502)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:48:52 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.2ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.5ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 9558)
+Completed 200 OK in 28ms (Views: 26.2ms | Allocations: 11033)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:48:59 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.2ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.0ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 9558)
+Completed 200 OK in 27ms (Views: 24.8ms | Allocations: 11029)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:49:13 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.6ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.9ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 9558)
+Completed 200 OK in 35ms (Views: 33.2ms | Allocations: 11029)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:49:45 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.9ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.8ms | Allocations: 667)
+  Rendered layout layouts/application.html.erb (Duration: 42.6ms | Allocations: 9568)
+Completed 200 OK in 50ms (Views: 49.0ms | Allocations: 11040)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:50:14 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.5ms | Allocations: 858)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.3ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 9568)
+Completed 200 OK in 32ms (Views: 30.3ms | Allocations: 11046)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:50:37 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.4ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.6ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 9558)
+Completed 200 OK in 24ms (Views: 22.9ms | Allocations: 11030)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:51:17 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.5ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.2ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 9558)
+Completed 200 OK in 20ms (Views: 18.7ms | Allocations: 11029)
+
+
+Started GET "/bookings/index" for 127.0.0.1 at 2021-11-25 13:51:21 +1100
+Processing by BookingsController#bookings_index as HTML
+Completed 401 Unauthorized in 1ms (Allocations: 281)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:51:21 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 573)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 24.2ms | Allocations: 9484)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.1ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 47.7ms | Allocations: 17567)
+Completed 200 OK in 52ms (Views: 50.5ms | Allocations: 19385)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:51:44 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 26.3ms | Allocations: 8452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 16260)
+Completed 200 OK in 49ms (Views: 47.7ms | Allocations: 17030)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-11-25 13:51:46 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 137)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 21.9ms | Allocations: 10771)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 18850)
+Completed 200 OK in 41ms (Views: 39.5ms | Allocations: 20222)
+
+
+Started GET "/bookings/index" for 127.0.0.1 at 2021-11-25 13:51:48 +1100
+Processing by BookingsController#bookings_index as HTML
+Completed 401 Unauthorized in 1ms (Allocations: 290)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:51:48 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 29.9ms | Allocations: 8458)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 48.1ms | Allocations: 16270)
+Completed 200 OK in 50ms (Views: 49.1ms | Allocations: 17006)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:51:50 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.4ms | Allocations: 576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 281)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 8400)
+Completed 200 OK in 20ms (Views: 18.8ms | Allocations: 8859)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:52:25 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.0ms | Allocations: 574)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 281)
+  Rendered layout layouts/application.html.erb (Duration: 10453.0ms | Allocations: 70573)
+Completed 200 OK in 10455ms (Views: 10453.9ms | Allocations: 71027)
+
+
+Started GET "/bookings/index" for 127.0.0.1 at 2021-11-25 13:52:40 +1100
+Processing by BookingsController#bookings_index as HTML
+Completed 401 Unauthorized in 1ms (Allocations: 249)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:52:40 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 33.1ms | Allocations: 8456)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 50.6ms | Allocations: 16266)
+Completed 200 OK in 53ms (Views: 51.8ms | Allocations: 16965)
+
+
+Started GET "/bookings/index" for 127.0.0.1 at 2021-11-25 13:53:08 +1100
+Processing by BookingsController#bookings_index as HTML
+Completed 401 Unauthorized in 1ms (Allocations: 249)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:53:08 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 573)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 35.2ms | Allocations: 9466)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.0ms | Allocations: 596)
+  Rendered layout layouts/application.html.erb (Duration: 10301.5ms | Allocations: 81835)
+Completed 200 OK in 10310ms (Views: 10308.8ms | Allocations: 83850)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:53:47 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.8ms | Allocations: 8463)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 16313)
+Completed 200 OK in 37ms (Views: 35.0ms | Allocations: 17080)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:54:21 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 29.4ms | Allocations: 8456)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 10474.5ms | Allocations: 78276)
+Completed 200 OK in 10477ms (Views: 10475.8ms | Allocations: 78964)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:55:29 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 30.3ms | Allocations: 8456)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 242)
+  Rendered layout layouts/application.html.erb (Duration: 10194.5ms | Allocations: 78269)
+Completed 200 OK in 10199ms (Views: 10197.7ms | Allocations: 78958)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:55:49 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.7ms | Allocations: 8470)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 242)
+  Rendered layout layouts/application.html.erb (Duration: 10410.7ms | Allocations: 78760)
+Completed 200 OK in 10413ms (Views: 10411.6ms | Allocations: 79450)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:57:15 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 573)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 30.6ms | Allocations: 9487)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 54.2ms | Allocations: 18233)
+Completed 200 OK in 61ms (Views: 59.9ms | Allocations: 20246)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:57:20 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 573)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.5ms | Allocations: 9465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.0ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 18210)
+Completed 200 OK in 46ms (Views: 44.0ms | Allocations: 20290)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:57:26 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 573)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.3ms | Allocations: 9465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.4ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 48.1ms | Allocations: 18210)
+Completed 200 OK in 60ms (Views: 58.3ms | Allocations: 20290)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:57:33 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 573)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.9ms | Allocations: 9465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.7ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 35.5ms | Allocations: 18210)
+Completed 200 OK in 40ms (Views: 38.7ms | Allocations: 20290)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:57:36 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.1ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 356)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 8889)
+Completed 200 OK in 25ms (Views: 22.7ms | Allocations: 10113)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:58:25 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.0ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 5.1ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 9556)
+Completed 200 OK in 37ms (Views: 35.9ms | Allocations: 11057)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:58:38 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.7ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.1ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 9556)
+Completed 200 OK in 31ms (Views: 29.2ms | Allocations: 11027)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 13:58:55 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.9ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.8ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 9556)
+Completed 200 OK in 31ms (Views: 29.5ms | Allocations: 11027)
+
+
+Started GET "/bookings/index" for 127.0.0.1 at 2021-11-25 13:59:00 +1100
+Processing by BookingsController#bookings_index as HTML
+Completed 401 Unauthorized in 1ms (Allocations: 281)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:59:00 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 573)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 26.9ms | Allocations: 9464)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 41.5ms | Allocations: 17547)
+Completed 200 OK in 46ms (Views: 44.6ms | Allocations: 19356)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 13:59:02 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.0ms | Allocations: 8452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 16260)
+Completed 200 OK in 32ms (Views: 30.5ms | Allocations: 17030)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-11-25 13:59:03 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 137)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 30.5ms | Allocations: 10786)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.5ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 47.4ms | Allocations: 18865)
+Completed 200 OK in 52ms (Views: 50.2ms | Allocations: 20237)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-11-25 13:59:23 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 521)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.3ms | Allocations: 11269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.9ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 41.0ms | Allocations: 20013)
+Completed 200 OK in 47ms (Views: 45.5ms | Allocations: 22033)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-11-25 14:00:34 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 521)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 34.4ms | Allocations: 11295)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.5ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 20147)
+Completed 200 OK in 54ms (Views: 52.5ms | Allocations: 22180)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-11-25 14:00:51 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 521)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 34.2ms | Allocations: 11269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.9ms | Allocations: 591)
+  Rendered layout layouts/application.html.erb (Duration: 55.8ms | Allocations: 20116)
+Completed 200 OK in 63ms (Views: 60.7ms | Allocations: 22137)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2021-11-25 14:01:00 +1100
+Processing by VehiclesController#vehicles_index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/vehicles_index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/vehicles_index.html.erb:16
+  Rendered vehicles/vehicles_index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1791)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 10014)
+Completed 200 OK in 52ms (Views: 25.6ms | ActiveRecord: 18.9ms | Allocations: 14482)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2021-11-25 14:01:47 +1100
+Processing by VehiclesController#vehicles_index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/vehicles_index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/vehicles_index.html.erb:16
+  Rendered vehicles/vehicles_index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1675)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.8ms | Allocations: 628)
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 10568)
+Completed 200 OK in 36ms (Views: 31.1ms | ActiveRecord: 1.8ms | Allocations: 12235)
+
+
+Started GET "/bookings/index" for 127.0.0.1 at 2021-11-25 14:01:50 +1100
+Processing by BookingsController#bookings_index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 14:01:50 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 573)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 27.3ms | Allocations: 9473)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 17556)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.0ms | Allocations: 19382)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 14:01:51 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.8ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.3ms | Allocations: 356)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 8889)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 10122)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 14:02:12 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.3ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.7ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 9559)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.0ms | Allocations: 11056)
+
+
+Started GET "/bookings/index" for 127.0.0.1 at 2021-11-25 14:02:15 +1100
+Processing by BookingsController#bookings_index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 14:02:15 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 573)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 31.8ms | Allocations: 9464)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 57.1ms | Allocations: 17547)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.0ms | Allocations: 19365)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 14:02:17 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 24.3ms | Allocations: 8452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | Allocations: 16260)
+Completed 200 OK in 52ms (Views: 50.2ms | ActiveRecord: 0.0ms | Allocations: 17035)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 14:02:30 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 573)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.6ms | Allocations: 9465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 18211)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.0ms | Allocations: 20220)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-25 14:02:33 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 3.1ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 356)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 8889)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms | Allocations: 10122)
+
+
+Started GET "/bookings/index" for 127.0.0.1 at 2021-11-25 14:02:42 +1100
+Processing by BookingsController#bookings_index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 14:02:42 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 22.4ms | Allocations: 8545)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 16358)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.0ms | Allocations: 17100)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 14:03:35 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 33.3ms | Allocations: 8452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 51.9ms | Allocations: 16260)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.0ms | Allocations: 16952)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 14:05:33 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 573)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 42.2ms | Allocations: 9465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 2.1ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 63.6ms | Allocations: 18265)
+Completed 200 OK in 68ms (Views: 66.4ms | ActiveRecord: 0.0ms | Allocations: 20274)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 14:05:42 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 573)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 32.3ms | Allocations: 9465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 53.2ms | Allocations: 18211)
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 0.0ms | Allocations: 20300)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-11-25 14:06:04 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 574)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.4ms | Allocations: 9481)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.7ms | Allocations: 590)
+  Rendered layout layouts/application.html.erb (Duration: 42.6ms | Allocations: 18336)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.0ms | Allocations: 20437)
+
+
+Started GET "/" for ::1 at 2021-11-25 14:06:48 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.8ms | Allocations: 858)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.9ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 9684)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms | Allocations: 11102)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-25 14:06:53 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 574)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 22.8ms | Allocations: 9468)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.1ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 43.6ms | Allocations: 17645)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.0ms | Allocations: 19491)
+
+
+Started GET "/" for ::1 at 2021-11-25 14:06:55 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.6ms | Allocations: 574)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 8405)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms | Allocations: 8913)
+
+
+Started GET "/" for ::1 at 2021-11-25 14:08:46 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.6ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.9ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 9556)
+Completed 200 OK in 22ms (Views: 21.0ms | Allocations: 10982)
+
+
+Started GET "/" for ::1 at 2021-11-25 14:09:21 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 4.0ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.8ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 9557)
+Completed 200 OK in 32ms (Views: 30.8ms | Allocations: 11026)
+
+
+Started GET "/" for ::1 at 2021-11-25 14:09:26 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.2ms | Allocations: 574)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 281)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 8398)
+Completed 200 OK in 18ms (Views: 16.9ms | Allocations: 8896)
+
+
+Started GET "/" for ::1 at 2021-11-25 14:09:49 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.1ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.9ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 9556)
+Completed 200 OK in 26ms (Views: 24.6ms | Allocations: 10979)
+
+
+Started GET "/" for ::1 at 2021-11-25 14:09:53 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.4ms | Allocations: 856)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 9557)
+Completed 200 OK in 22ms (Views: 20.8ms | Allocations: 11031)
+
+
+Started GET "/" for ::1 at 2021-11-25 14:10:01 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.5ms | Allocations: 574)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 8398)
+Completed 200 OK in 18ms (Views: 16.7ms | Allocations: 8899)
+
+
+Started GET "/" for ::1 at 2021-11-25 14:10:18 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.1ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.6ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 9556)
+Completed 200 OK in 22ms (Views: 20.5ms | Allocations: 10979)
+
+
+Started GET "/" for ::1 at 2021-11-25 14:10:28 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 10.6ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.4ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 40.2ms | Allocations: 9556)
+Completed 200 OK in 44ms (Views: 42.7ms | Allocations: 11025)
+
+
+Started GET "/" for ::1 at 2021-11-25 14:10:35 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 3.0ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.7ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 9556)
+Completed 200 OK in 25ms (Views: 23.3ms | Allocations: 11025)
+
+
+Started GET "/" for ::1 at 2021-11-25 14:10:38 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.5ms | Allocations: 574)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 8398)
+Completed 200 OK in 18ms (Views: 17.1ms | Allocations: 8899)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-25 14:10:40 +1100
+Processing by VehiclesController#vehicles_index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/vehicles_index.html.erb within layouts/application
+  [1m[36mVehicle Load (7.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/vehicles_index.html.erb:16
+  Rendered vehicles/vehicles_index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 1796)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 10018)
+Completed 200 OK in 53ms (Views: 22.8ms | ActiveRecord: 20.7ms | Allocations: 14435)
+
+
+Started GET "/bookings/index" for ::1 at 2021-11-25 14:10:41 +1100
+Processing by BookingsController#bookings_index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-25 14:10:41 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 573)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 9469)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 17552)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.0ms | Allocations: 19379)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-25 14:10:42 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.6ms | Allocations: 8452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 44.3ms | Allocations: 16260)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.0ms | Allocations: 17035)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-11-25 14:10:43 +1100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 137)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 28.0ms | Allocations: 10786)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 18865)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.0ms | Allocations: 20243)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-11-25 14:10:44 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 29.5ms | Allocations: 8458)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 48.8ms | Allocations: 16266)
+Completed 200 OK in 52ms (Views: 50.2ms | ActiveRecord: 0.0ms | Allocations: 17041)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-11-25 14:10:45 +1100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/bookings/index
+Completed 302 Found in 321ms (ActiveRecord: 4.4ms | Allocations: 8415)
+
+
+Started GET "/bookings/index" for ::1 at 2021-11-25 14:10:46 +1100
+Processing by BookingsController#bookings_index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/bookings_index.html.erb within layouts/application
+  [1m[36mBooking Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:2
+  [1m[36mBooking Load (1.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 51]]
+  ↳ app/views/bookings/bookings_index.html.erb:20
+  [1m[36mVehicle Load (1.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:23
+  Rendered bookings/bookings_index.html.erb within layouts/application (Duration: 45.1ms | Allocations: 8920)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 67.7ms | Allocations: 17062)
+Completed 200 OK in 102ms (Views: 52.8ms | ActiveRecord: 20.1ms | Allocations: 22416)
+
+
+Started GET "/booking/5" for ::1 at 2021-11-25 14:10:49 +1100
+Processing by BookingsController#booking_show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mBooking Load (1.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `booking_show'
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/booking_show.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:1
+  [1m[36mVehicle Load (1.9ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (2.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 13], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:4
+  Rendered bookings/booking_show.html.erb within layouts/application (Duration: 33.6ms | Allocations: 6686)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 53.8ms | Allocations: 14693)
+Completed 200 OK in 71ms (Views: 45.8ms | ActiveRecord: 14.0ms | Allocations: 17429)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-25 14:10:52 +1100
+Processing by VehiclesController#vehicles_index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/vehicles_index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/vehicles_index.html.erb:16
+  Rendered vehicles/vehicles_index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1231)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:23
+  Rendered shared/_nav.html.erb (Duration: 3.7ms | Allocations: 1134)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 10007)
+Completed 200 OK in 30ms (Views: 23.0ms | ActiveRecord: 2.7ms | Allocations: 10705)
+
+
+Started GET "/bookings/index" for ::1 at 2021-11-25 14:10:55 +1100
+Processing by BookingsController#bookings_index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/bookings_index.html.erb within layouts/application
+  [1m[36mBooking Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:2
+  [1m[36mBooking Load (2.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 51]]
+  ↳ app/views/bookings/bookings_index.html.erb:20
+  [1m[36mVehicle Load (1.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:23
+  Rendered bookings/bookings_index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 2403)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 10325)
+Completed 200 OK in 39ms (Views: 27.9ms | ActiveRecord: 6.7ms | Allocations: 12100)
+
+
+Started GET "/booking/5" for ::1 at 2021-11-25 14:10:56 +1100
+Processing by BookingsController#booking_show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mBooking Load (2.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `booking_show'
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/booking_show.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:1
+  [1m[36mVehicle Load (1.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 13], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:4
+  Rendered bookings/booking_show.html.erb within layouts/application (Duration: 14.8ms | Allocations: 2766)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 10590)
+Completed 200 OK in 49ms (Views: 31.6ms | ActiveRecord: 8.9ms | Allocations: 12905)
+
+
+Started DELETE "/booking/5" for ::1 at 2021-11-25 14:10:59 +1100
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"5"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mBooking Load (1.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:24:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:26:in `block in destroy'
+  [1m[36mBooking Destroy (1.8ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/bookings_controller.rb:26:in `block in destroy'
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:26:in `block in destroy'
+  [1m[36mVehicle Load (1.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mOwner Load (3.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+Redirected to http://localhost:3000/bookings/index
+Completed 302 Found in 60ms (ActiveRecord: 26.4ms | Allocations: 12724)
+
+
+Started GET "/bookings/index" for ::1 at 2021-11-25 14:10:59 +1100
+Processing by BookingsController#bookings_index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/bookings_index.html.erb within layouts/application
+  [1m[36mBooking Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:2
+  Rendered bookings/bookings_index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 861)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 8839)
+Completed 200 OK in 43ms (Views: 31.5ms | ActiveRecord: 4.3ms | Allocations: 10713)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-25 14:11:01 +1100
+Processing by VehiclesController#vehicles_index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/vehicles_index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/vehicles_index.html.erb:16
+  Rendered vehicles/vehicles_index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:23
+  Rendered shared/_nav.html.erb (Duration: 4.0ms | Allocations: 1119)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 9986)
+Completed 200 OK in 27ms (Views: 21.8ms | ActiveRecord: 3.0ms | Allocations: 10604)
+
+
+Started GET "/vehicle/13" for ::1 at 2021-11-25 14:11:02 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mVehicle Load (1.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 13], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:32
+  [1m[36mOwner Load (1.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:32
+  [1m[36mBooking Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."vehicle_id" = $1 LIMIT $2[0m  [["vehicle_id", 13], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:46
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 32.6ms | Allocations: 4971)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | Allocations: 12693)
+Completed 200 OK in 54ms (Views: 38.3ms | ActiveRecord: 11.2ms | Allocations: 14136)
+
+
+Started POST "/vehicle/13" for ::1 at 2021-11-25 14:11:05 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"13"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mVehicle Load (1.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mBooking Create (8.2ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "vehicle_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 51], ["vehicle_id", 13], ["created_at", "2021-11-25 03:11:05.077247"], ["updated_at", "2021-11-25 03:11:05.077247"]]
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+  [1m[36mOwner Load (1.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+  [1m[36mVehicle Update (1.8ms)[0m  [1m[33mUPDATE "vehicles" SET "available" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["available", false], ["updated_at", "2021-11-25 03:11:05.100683"], ["id", 13]]
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+Redirected to http://localhost:3000/booking/6
+Completed 302 Found in 57ms (ActiveRecord: 25.7ms | Allocations: 9773)
+
+
+Started GET "/booking/6" for ::1 at 2021-11-25 14:11:05 +1100
+Processing by BookingsController#booking_show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mBooking Load (1.0ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `booking_show'
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/booking_show.html.erb within layouts/application
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:1
+  [1m[36mVehicle Load (2.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (7.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 13], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:4
+  Rendered bookings/booking_show.html.erb within layouts/application (Duration: 24.0ms | Allocations: 2763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 46.6ms | Allocations: 10587)
+Completed 200 OK in 58ms (Views: 34.3ms | ActiveRecord: 16.4ms | Allocations: 12888)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-25 14:11:07 +1100
+Processing by VehiclesController#vehicles_index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/vehicles_index.html.erb within layouts/application
+  [1m[36mVehicle Load (4.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/vehicles_index.html.erb:16
+  Rendered vehicles/vehicles_index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1220)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:23
+  Rendered shared/_nav.html.erb (Duration: 2.6ms | Allocations: 1119)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 9980)
+Completed 200 OK in 34ms (Views: 26.6ms | ActiveRecord: 5.3ms | Allocations: 10594)
+
+
+Started GET "/bookings/index" for ::1 at 2021-11-25 14:11:10 +1100
+Processing by BookingsController#bookings_index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/bookings_index.html.erb within layouts/application
+  [1m[36mBooking Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:2
+  [1m[36mBooking Load (1.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 51]]
+  ↳ app/views/bookings/bookings_index.html.erb:20
+  [1m[36mVehicle Load (1.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:23
+  Rendered bookings/bookings_index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 2383)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 10207)
+Completed 200 OK in 44ms (Views: 32.0ms | ActiveRecord: 6.7ms | Allocations: 11978)
+
+
+Started GET "/booking/6" for ::1 at 2021-11-25 14:11:11 +1100
+Processing by BookingsController#booking_show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mBooking Load (5.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `booking_show'
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/booking_show.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:1
+  [1m[36mVehicle Load (1.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 13], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:4
+  Rendered bookings/booking_show.html.erb within layouts/application (Duration: 11.9ms | Allocations: 2763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 10587)
+Completed 200 OK in 49ms (Views: 30.9ms | ActiveRecord: 10.4ms | Allocations: 12889)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-25 14:11:15 +1100
+Processing by VehiclesController#vehicles_index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/vehicles_index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/vehicles_index.html.erb:16
+  Rendered vehicles/vehicles_index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:23
+  Rendered shared/_nav.html.erb (Duration: 4.3ms | Allocations: 1119)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 9979)
+Completed 200 OK in 34ms (Views: 27.9ms | ActiveRecord: 3.1ms | Allocations: 10593)
+
+
+Started GET "/vehicle/13" for ::1 at 2021-11-25 14:11:17 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mVehicle Load (1.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 13], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:32
+  [1m[36mOwner Load (1.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:32
+  [1m[36mBooking Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."vehicle_id" = $1 LIMIT $2[0m  [["vehicle_id", 13], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:46
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 29.0ms | Allocations: 3535)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 50.1ms | Allocations: 11358)
+Completed 200 OK in 57ms (Views: 46.0ms | ActiveRecord: 7.7ms | Allocations: 12528)
+
+
+Started GET "/bookings/index" for ::1 at 2021-11-25 14:11:20 +1100
+Processing by BookingsController#bookings_index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/bookings_index.html.erb within layouts/application
+  [1m[36mBooking Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:2
+  [1m[36mBooking Load (1.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 51]]
+  ↳ app/views/bookings/bookings_index.html.erb:20
+  [1m[36mVehicle Load (1.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:23
+  Rendered bookings/bookings_index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 2383)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 37.6ms | Allocations: 10207)
+Completed 200 OK in 44ms (Views: 34.3ms | ActiveRecord: 5.4ms | Allocations: 11978)
+
+
+Started GET "/booking/6" for ::1 at 2021-11-25 14:11:21 +1100
+Processing by BookingsController#booking_show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mBooking Load (1.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `booking_show'
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/booking_show.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:1
+  [1m[36mVehicle Load (1.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (5.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 13], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:4
+  Rendered bookings/booking_show.html.erb within layouts/application (Duration: 16.1ms | Allocations: 2763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 10587)
+Completed 200 OK in 51ms (Views: 33.2ms | ActiveRecord: 10.9ms | Allocations: 12889)
+
+
+Started DELETE "/booking/6" for ::1 at 2021-11-25 14:11:23 +1100
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"6"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mBooking Load (2.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:24:in `destroy'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:26:in `block in destroy'
+  [1m[36mBooking Destroy (3.1ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/bookings_controller.rb:26:in `block in destroy'
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:26:in `block in destroy'
+  [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mOwner Load (1.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mVehicle Update (1.9ms)[0m  [1m[33mUPDATE "vehicles" SET "available" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["available", true], ["updated_at", "2021-11-25 03:11:23.705114"], ["id", 13]]
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+Redirected to http://localhost:3000/bookings/index
+Completed 302 Found in 49ms (ActiveRecord: 25.1ms | Allocations: 8188)
+
+
+Started GET "/bookings/index" for ::1 at 2021-11-25 14:11:23 +1100
+Processing by BookingsController#bookings_index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/bookings_index.html.erb within layouts/application
+  [1m[36mBooking Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:2
+  Rendered bookings/bookings_index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 841)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 40.8ms | Allocations: 8665)
+Completed 200 OK in 49ms (Views: 40.0ms | ActiveRecord: 3.6ms | Allocations: 10433)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-25 14:11:25 +1100
+Processing by VehiclesController#vehicles_index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/vehicles_index.html.erb within layouts/application
+  [1m[36mVehicle Load (2.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/vehicles_index.html.erb:16
+  Rendered vehicles/vehicles_index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:23
+  Rendered shared/_nav.html.erb (Duration: 6.9ms | Allocations: 1119)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 9992)
+Completed 200 OK in 37ms (Views: 29.9ms | ActiveRecord: 5.0ms | Allocations: 10606)
+
+
+Started GET "/vehicle/13" for ::1 at 2021-11-25 14:11:27 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mVehicle Load (1.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (4.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 13], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:32
+  [1m[36mOwner Load (8.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:32
+  [1m[36mBooking Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."vehicle_id" = $1 LIMIT $2[0m  [["vehicle_id", 13], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:46
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 34.2ms | Allocations: 3566)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 51.8ms | Allocations: 11389)
+Completed 200 OK in 64ms (Views: 33.8ms | ActiveRecord: 20.0ms | Allocations: 12556)
+
+
+Started GET "/vehicle/14" for ::1 at 2021-11-25 14:11:28 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mVehicle Load (1.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 14], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:32
+  [1m[36mOwner Load (1.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:32
+  [1m[36mBooking Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."vehicle_id" = $1 LIMIT $2[0m  [["vehicle_id", 14], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:46
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 22.3ms | Allocations: 3535)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 80.3ms | Allocations: 11359)
+Completed 200 OK in 97ms (Views: 71.6ms | ActiveRecord: 11.3ms | Allocations: 12527)
+
+
+Started GET "/vehicle/4" for ::1 at 2021-11-25 14:11:28 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVehicle Load (1.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (3.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:32
+  [1m[36mOwner Load (3.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:32
+  [1m[36mBooking Exists? (3.2ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."vehicle_id" = $1 LIMIT $2[0m  [["vehicle_id", 4], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:46
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 33.4ms | Allocations: 3567)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 62.0ms | Allocations: 11405)
+Completed 200 OK in 70ms (Views: 51.8ms | ActiveRecord: 12.9ms | Allocations: 12575)
+
+
+Started POST "/vehicle/13" for ::1 at 2021-11-25 14:11:35 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"13"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mVehicle Load (2.9ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mBooking Create (1.9ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "vehicle_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 51], ["vehicle_id", 13], ["created_at", "2021-11-25 03:11:35.520904"], ["updated_at", "2021-11-25 03:11:35.520904"]]
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+  [1m[36mOwner Load (4.0ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+  [1m[36mVehicle Update (1.7ms)[0m  [1m[33mUPDATE "vehicles" SET "available" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["available", false], ["updated_at", "2021-11-25 03:11:35.546288"], ["id", 13]]
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+Redirected to http://localhost:3000/booking/7
+Completed 302 Found in 57ms (ActiveRecord: 27.0ms | Allocations: 9344)
+
+
+Started GET "/booking/7" for ::1 at 2021-11-25 14:11:35 +1100
+Processing by BookingsController#booking_show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mBooking Load (1.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `booking_show'
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/booking_show.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:1
+  [1m[36mVehicle Load (2.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 13], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:4
+  Rendered bookings/booking_show.html.erb within layouts/application (Duration: 16.0ms | Allocations: 2763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 10689)
+Completed 200 OK in 48ms (Views: 32.6ms | ActiveRecord: 8.9ms | Allocations: 12989)
+
+
+Started POST "/vehicle/14" for ::1 at 2021-11-25 14:11:36 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"14"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mVehicle Load (1.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mBooking Create (1.3ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "vehicle_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 51], ["vehicle_id", 14], ["created_at", "2021-11-25 03:11:36.382984"], ["updated_at", "2021-11-25 03:11:36.382984"]]
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+  [1m[36mOwner Load (1.9ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+  [1m[36mVehicle Update (1.9ms)[0m  [1m[33mUPDATE "vehicles" SET "available" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["available", false], ["updated_at", "2021-11-25 03:11:36.407317"], ["id", 14]]
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+Redirected to http://localhost:3000/booking/8
+Completed 302 Found in 55ms (ActiveRecord: 19.7ms | Allocations: 9337)
+
+
+Started GET "/booking/8" for ::1 at 2021-11-25 14:11:36 +1100
+Processing by BookingsController#booking_show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mBooking Load (1.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `booking_show'
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/booking_show.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:1
+  [1m[36mVehicle Load (1.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (2.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 14], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:4
+  Rendered bookings/booking_show.html.erb within layouts/application (Duration: 13.1ms | Allocations: 2763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | Allocations: 10587)
+Completed 200 OK in 48ms (Views: 31.9ms | ActiveRecord: 9.5ms | Allocations: 12887)
+
+
+Started POST "/vehicle/4" for ::1 at 2021-11-25 14:11:37 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mVehicle Load (2.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mBooking Create (2.0ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "vehicle_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 51], ["vehicle_id", 4], ["created_at", "2021-11-25 03:11:37.344888"], ["updated_at", "2021-11-25 03:11:37.344888"]]
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+  [1m[36mOwner Load (2.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+  [1m[36mVehicle Update (1.8ms)[0m  [1m[33mUPDATE "vehicles" SET "available" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["available", false], ["updated_at", "2021-11-25 03:11:37.364682"], ["id", 4]]
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:17:in `block in create'
+Redirected to http://localhost:3000/booking/9
+Completed 302 Found in 51ms (ActiveRecord: 22.0ms | Allocations: 9341)
+
+
+Started GET "/booking/9" for ::1 at 2021-11-25 14:11:37 +1100
+Processing by BookingsController#booking_show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mBooking Load (1.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `booking_show'
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/booking_show.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:1
+  [1m[36mVehicle Load (2.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (1.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:4
+  Rendered bookings/booking_show.html.erb within layouts/application (Duration: 21.4ms | Allocations: 2763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 10587)
+Completed 200 OK in 60ms (Views: 39.4ms | ActiveRecord: 8.9ms | Allocations: 12886)
+
+
+Started GET "/vehicles" for ::1 at 2021-11-25 14:11:42 +1100
+Processing by VehiclesController#vehicles_index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/vehicles_index.html.erb within layouts/application
+  [1m[36mVehicle Load (4.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY brand ASC[0m
+  ↳ app/views/vehicles/vehicles_index.html.erb:16
+  Rendered vehicles/vehicles_index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:23
+  Rendered shared/_nav.html.erb (Duration: 5.7ms | Allocations: 1119)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 9979)
+Completed 200 OK in 32ms (Views: 23.8ms | ActiveRecord: 6.1ms | Allocations: 10593)
+
+
+Started GET "/vehicle/4" for ::1 at 2021-11-25 14:11:47 +1100
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVehicle Load (1.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:3
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:32
+  [1m[36mOwner Load (1.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:32
+  [1m[36mBooking Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."vehicle_id" = $1 LIMIT $2[0m  [["vehicle_id", 4], ["LIMIT", 1]]
+  ↳ app/views/vehicles/show.html.erb:46
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 18.1ms | Allocations: 3535)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 11358)
+Completed 200 OK in 45ms (Views: 34.5ms | ActiveRecord: 7.3ms | Allocations: 12528)
+
+
+Started DELETE "/booking/7" for ::1 at 2021-11-25 14:11:51 +1100
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"7"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mBooking Load (3.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:24:in `destroy'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:26:in `block in destroy'
+  [1m[36mBooking Destroy (1.9ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/bookings_controller.rb:26:in `block in destroy'
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:26:in `block in destroy'
+  [1m[36mVehicle Load (1.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mOwner Load (1.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mVehicle Update (1.0ms)[0m  [1m[33mUPDATE "vehicles" SET "available" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["available", true], ["updated_at", "2021-11-25 03:11:51.479950"], ["id", 13]]
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+Redirected to http://localhost:3000/bookings/index
+Completed 302 Found in 56ms (ActiveRecord: 25.4ms | Allocations: 8176)
+
+
+Started GET "/bookings/index" for ::1 at 2021-11-25 14:11:51 +1100
+Processing by BookingsController#bookings_index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/bookings_index.html.erb within layouts/application
+  [1m[36mBooking Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:2
+  [1m[36mBooking Load (1.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 51]]
+  ↳ app/views/bookings/bookings_index.html.erb:20
+  [1m[36mVehicle Load (2.9ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:23
+  [1m[36mVehicle Load (1.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:23
+  Rendered bookings/bookings_index.html.erb within layouts/application (Duration: 29.9ms | Allocations: 3234)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 52.5ms | Allocations: 11058)
+Completed 200 OK in 61ms (Views: 45.3ms | ActiveRecord: 10.0ms | Allocations: 12826)
+
+
+Started DELETE "/booking/8" for ::1 at 2021-11-25 14:11:53 +1100
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"8"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mBooking Load (3.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:24:in `destroy'
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:26:in `block in destroy'
+  [1m[36mBooking Destroy (1.4ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/bookings_controller.rb:26:in `block in destroy'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:26:in `block in destroy'
+  [1m[36mVehicle Load (4.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mOwner Load (1.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mVehicle Update (1.5ms)[0m  [1m[33mUPDATE "vehicles" SET "available" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["available", true], ["updated_at", "2021-11-25 03:11:53.173134"], ["id", 14]]
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+Redirected to http://localhost:3000/bookings/index
+Completed 302 Found in 61ms (ActiveRecord: 31.9ms | Allocations: 8173)
+
+
+Started GET "/bookings/index" for ::1 at 2021-11-25 14:11:53 +1100
+Processing by BookingsController#bookings_index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/bookings_index.html.erb within layouts/application
+  [1m[36mBooking Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:2
+  [1m[36mBooking Load (1.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 51]]
+  ↳ app/views/bookings/bookings_index.html.erb:20
+  [1m[36mVehicle Load (1.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:23
+  Rendered bookings/bookings_index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2383)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 10207)
+Completed 200 OK in 36ms (Views: 25.4ms | ActiveRecord: 5.7ms | Allocations: 11975)
+
+
+Started GET "/bookings/index" for ::1 at 2021-11-25 14:11:58 +1100
+Processing by BookingsController#bookings_index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/bookings_index.html.erb within layouts/application
+  [1m[36mBooking Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:2
+  [1m[36mBooking Load (3.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 51]]
+  ↳ app/views/bookings/bookings_index.html.erb:20
+  [1m[36mVehicle Load (2.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:23
+  Rendered bookings/bookings_index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 2383)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 10207)
+Completed 200 OK in 43ms (Views: 27.0ms | ActiveRecord: 9.1ms | Allocations: 11978)
+
+
+Started GET "/booking/9" for ::1 at 2021-11-25 14:11:59 +1100
+Processing by BookingsController#booking_show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `booking_show'
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/booking_show.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:1
+  [1m[36mVehicle Load (2.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (2.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Vehicle"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/bookings/booking_show.html.erb:4
+  Rendered bookings/booking_show.html.erb within layouts/application (Duration: 25.1ms | Allocations: 2763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 43.0ms | Allocations: 10587)
+Completed 200 OK in 55ms (Views: 36.6ms | ActiveRecord: 9.3ms | Allocations: 12889)
+
+
+Started DELETE "/booking/9" for ::1 at 2021-11-25 14:12:02 +1100
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"9"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mBooking Load (1.0ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:24:in `destroy'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:26:in `block in destroy'
+  [1m[36mBooking Destroy (1.7ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/bookings_controller.rb:26:in `block in destroy'
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:26:in `block in destroy'
+  [1m[36mVehicle Load (1.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mOwner Load (2.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mVehicle Update (8.7ms)[0m  [1m[33mUPDATE "vehicles" SET "available" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["available", true], ["updated_at", "2021-11-25 03:12:02.331890"], ["id", 4]]
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:27:in `block in destroy'
+Redirected to http://localhost:3000/bookings/index
+Completed 302 Found in 57ms (ActiveRecord: 31.1ms | Allocations: 8173)
+
+
+Started GET "/bookings/index" for ::1 at 2021-11-25 14:12:02 +1100
+Processing by BookingsController#bookings_index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/bookings_index.html.erb within layouts/application
+  [1m[36mBooking Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."user_id" = $1 LIMIT $2[0m  [["user_id", 51], ["LIMIT", 1]]
+  ↳ app/views/bookings/bookings_index.html.erb:2
+  Rendered bookings/bookings_index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 841)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 8665)
+Completed 200 OK in 28ms (Views: 18.4ms | ActiveRecord: 4.7ms | Allocations: 10434)
+
+
+Started GET "/" for ::1 at 2021-11-25 14:12:03 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1.1ms | Allocations: 576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:23
+  Rendered shared/_nav.html.erb (Duration: 11.1ms | Allocations: 1332)
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 9451)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 1.7ms | Allocations: 9914)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-11-25 14:12:04 +1100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 0.8ms | Allocations: 4996)
+
+
+Started GET "/" for ::1 at 2021-11-25 14:12:04 +1100
+Processing by HomeController#page as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 2.3ms | Allocations: 668)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.7ms | Allocations: 299)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 8575)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms | Allocations: 9110)
+
+
