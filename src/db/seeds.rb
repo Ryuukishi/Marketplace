@@ -28,10 +28,10 @@ end
     brand: Faker::Vehicle.make,
     model: Faker::Vehicle.model,
     body_type: Faker::Vehicle.car_type,
-    door_count: Faker::Vehicle.doors,
+    door_count: Faker::Number.between(from: 2, to: 5),
     seat_count: Faker::Number.between(from: 1, to: 8),
     available: true,
-    owner_id: Faker::Number.between(from: 1, to: 25)
+    owner_id: Faker::Number.between(from: 1, to: 10)
   )
 end
 
@@ -40,4 +40,8 @@ end
     user_id: Faker::Number.between(from: 1, to: 50),
     vehicle_id: Faker::Number.between(from: 1, to: 50)
   )
+end 
+
+Booking.all.each do |booking|
+  booking.vehicle.update(available: false)
 end 
