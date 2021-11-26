@@ -1,0 +1,100 @@
+<h1> <%= @vehicle.brand %> <%= @vehicle.model %> </h1>
+
+<% if @vehicle.image.attached? %>
+  <%= image_tag @vehicle.image, class: "w-50" %>
+<% else %>
+  <i class="fas fa-car fa-10x"></i>
+<% end %>
+
+<table class="table table-hover w-25">
+  <tr>
+    <th scope="row">Body:</th>
+    <td><%= @vehicle.body_type %></td>
+  </tr>
+  <tr>
+    <th scope="row">Doors:</th>  
+    <td><%= @vehicle.door_count %></td>      
+  </tr>  
+  <tr>
+    <th scope="row">Seats:</th>
+    <td><%= @vehicle.seat_count %></td>
+  </tr>
+  <tr>
+    <th scope="row">Available?</th>
+    <% if @vehicle.available %>
+      <td>✅</td>
+    <% else %>
+      <td>❌</td>
+    <% end %>
+  </tr>
+</table>
+
+<% if user_signed_in? && current_user.owner %>
+  <% if (@vehicle.owner_id == current_user.owner.id) %>
+    <a class="btn btn-primary mb-3" href="<%= edit_vehicle_path %>" role="button">Edit</a>
+    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#ConfirmDelete">Delete</button>
+  <% end %>
+<% else %>
+  <% if @vehicle.available == true %>
+    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ConfirmBooking">Book this car</button>
+  <% else %>
+    <button type="button" class="btn btn-secondary mb-3">Currently unavailable</button>
+  <% end %>
+<% end %>
+
+
+  <% if Booking.exists?(vehicle_id: @vehicle.id) %>
+    <div class="modal fade" id="ConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="ConfirmDelete" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ConfirmDelete">Error</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            You can't delete your vehicle right now as it currently has an active booking.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% else %>
+    <div class="modal fade" id="ConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="ConfirmDelete" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ConfirmDelete">Confirm</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Are you sure?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <%= link_to 'Delete', delete_vehicle_path(@vehicle.id), method: :delete, class: 'btn btn-danger' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+    <!-- Modal for ConfirmBooking-->
+  <div class="modal fade" id="ConfirmBooking" tabindex="-1" role="dialog" aria-labelledby="ConfirmBooking" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ConfirmBooking">Confirm</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Book this car?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <%= link_to 'Book', new_booking_path(@vehicle.id), method: :post, class: 'btn btn-success' %>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,19 @@
+<%= simple_form_for vehicle do |f| %>
+  <%= f.error_notification %>
+
+    <%= f.input :brand %>
+    <%= f.input :model  %>
+    <%= f.input :body_type, collection: ['Small Car', 'Medium Car', 'Large Car', 'Station Wagon', 'SUV', 'Van', 'Ute', 'People Mover', 'Convertible' ] %>
+    <%= f.input :door_count, collection: 2..5, error: 'Please enter a valid number' %>
+    <%= f.input :seat_count, collection: 1..12, error: 'Please enter a valid number' %>
+    <div class="mt-1"><%= f.input :available, as: :boolean %></div>
+    <div class="mb-3">
+    <%= f.label :image, class:"form-label" %>
+    <%= f.file_field :image, accept:'image/*', class:"form-control" %>
+    </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary" %>
+    <%= link_to 'Cancel', :back, class: "btn btn-outline-primary" %>
+  </div>
+<% end %>
