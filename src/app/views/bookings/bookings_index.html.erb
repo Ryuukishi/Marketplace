@@ -1,4 +1,4 @@
-
+<%# Check if any active bookings else show a message. %>
 <% if ! current_user.bookings.exists? %>
   <div>
     <h2>You don't have any bookings yet.</h2>

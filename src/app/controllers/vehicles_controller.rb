@@ -44,6 +44,8 @@ class VehiclesController < ApplicationController
     @vehicle = Vehicle.find(params[:id])
   end
 
+  # Edits a vehicle by first passing in the params submitted by the user.
+
   def update
       @vehicle = Vehicle.find(params[:id])
 
@@ -56,6 +58,7 @@ class VehiclesController < ApplicationController
       end
   end
 
+  # Destroys a vehicle instance.
   def destroy
     @vehicle = Vehicle.find(params[:id])
     respond_to do |format|
