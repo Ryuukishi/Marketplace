@@ -13,9 +13,9 @@
             Cars
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="<% vehicles_path %>">Find a car</a></li>
-            <li><a class="dropdown-item" href="<% new_vehicle_path %>">Rent your car</a></li>
-            <li><a class="dropdown-item" href="<% mycars_path %>">My cars</a></li>
+            <li><a class="dropdown-item" href="<%= vehicles_path %>">Find a car</a></li>
+            <li><a class="dropdown-item" href="<%= new_vehicle_path %>">Rent your car</a></li>
+            <li><a class="dropdown-item" href="<%= mycars_path %>">My cars</a></li>
           </ul>
         <li class="nav-item">
           <%= link_to "Bookings", bookings_path, class: "nav-link" %>

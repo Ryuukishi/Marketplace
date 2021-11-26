@@ -195,7 +195,52 @@ Other abstractions that are present in the app include user authentication and a
 
 
 
+```ruby
+class User < ApplicationRecord
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+  has_one :owner
+  has_many :bookings
+  has_many :vehicles, through: :bookings
+end		
+```
 
+The User model has a one-to-one relationship with the Owner model. Each user can only be related to one user.  A separate Owner model is necessary in our app because even though it is a two-sided marketplace, the ownership of the vehicle does not change hands and therefore it will be difficult to track who owns which vehicle, especially when making bookings. Additionally, there is a many-to-many relationship between the Vehicle model. The two models are joined together by the Booking model. This allows a user to make many bookings consisting of multiple vehicles.
+
+
+
+```ruby
+class Owner < ApplicationRecord
+  belongs_to :user, optional: true
+  has_many :vehicles
+end
+```
+
+The Owner model belongs to the User model with which it has a one-to-one relationship. The relationship is stated as being optional because a user isn't technically an owner until they list a vehicle for rent. The Owner model also has a one-to-many relationship with the Vehicle model. This is because a user (owner) can own many vehicles but a vehicle can only belong to one user (owner).
+
+
+
+```ruby
+class Vehicle < ApplicationRecord
+  has_one_attached :image
+  belongs_to :owner
+  has_many :bookings
+  has_many :users, through: :bookings
+end
+```
+
+The Vehicle model belongs to the Owner to which it has a one-to-many relationship. An owner can own many vehicles. Additionally it has a many-to-many relationship with the User model through the Booking model which as a joining table. Additionally, there isn't a "relationship" between the Vehicle model and Active Storage as there are no Foreign Keys present in either table, but there is a connection nevertheless as `has_one_attached :image` allows users to upload images of their vehicles which will then be stored in Active Storage (AWS S3).
+
+
+
+```ruby
+class Booking < ApplicationRecord
+  belongs_to :user
+  belongs_to :vehicle
+end
+```
+
+Lastly, the Booking model acts to join the User model and Vehicle model together. A user can make book many vehicles and a vehicle can be booked by many users. 
 
 
 
@@ -203,9 +248,9 @@ Other abstractions that are present in the app include user authentication and a
 
 
 
+In order to establish the relationships between different models specified above, we can relate to each model using Foreign Keys. Generally, a Foreign Key in one table is a Primary Key in the corresponding table with which it is related to i.e. using the above example, the Owner model has a Foreign Key of `user_id` which establishes a relation between Owner and User. Likewise, in the Vehicle model there is a Foreign Key of `owner_id` which links it to the Owner model. And because Booking is a joining table that joins two models together, it has two Foreign Keys: `user_id` and `vehicle_id` which is used to establish the many-to-many relationship between User and Vehicle *through* Booking. This can be seen visually in the provided ERD.
 
-
-
+To summarise, including a Foreign Key in a table establishes a relationship between the two tables. However this doesn't specify *what* kind of relationship these two tables have, e.g. one-to-one, one-to-many etc. The type of relationship is only specified in the model itself.
 
 
 
@@ -319,3 +364,28 @@ Other abstractions that are present in the app include user authentication and a
 
 
 
+Tasks will be tracked using Jira. It provides a visual timeline for tracking project timeline and due dates.
+
+
+
+![11-12](docs/jira/11-12.png)![11-11](docs/jira/11-11.png)![11-10](docs/jira/11-10.png)
+
+![11-13](docs/jira/11-13.png)
+
+![11-14](docs/jira/11-14.png)
+
+![11-15](docs/jira/11-15.png)
+
+![11-16](docs/jira/11-16.png)
+
+![11-17](docs/jira/11-17.png)
+
+![11-18](docs/jira/11-18.png)
+
+![11-23](docs/jira/11-23.png)
+
+![11-24](docs/jira/11-24.png)
+
+![11-25](docs/jira/11-25.png)
+
+![11-26](docs/jira/11-26.png)
