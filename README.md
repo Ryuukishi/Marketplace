@@ -6,6 +6,8 @@ Available at: https://wildspeed.herokuapp.com/
 
 GitHub repo: https://github.com/Ryuukishi/Marketplace
 
+Master Key: d66f2a36526a5db9c0927f3ea992eab1
+
 
 
 ## R7 Identification of the *problem* you are trying to solve by building this particular marketplace *app*
